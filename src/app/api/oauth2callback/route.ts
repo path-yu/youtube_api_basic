@@ -1,5 +1,3 @@
-import { oauth2Client } from "@/ultis/oauthClient";
-
 // google oauth2 callback 接口
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url!);
@@ -11,10 +9,14 @@ export async function GET(request: Request) {
     });
   }
   try {
-    const { tokens } = await oauth2Client.getToken(code);
-    oauth2Client.setCredentials(tokens);
-    // 重定向到首页传入token
-    return Response.redirect(`/?access_token=${tokens.access_token}'`);
+    // 重定向到首页传入code
+    console.log(process.env.NODE_ENV);
+
+    let url =
+      process.env.NODE_ENV == "development"
+        ? "http://localhost:3000"
+        : "https://youtube-manger-nwpl.vercel.app";
+    return Response.redirect(`${url}/?code=${code}'`);
   } catch (error) {
     return new Response("Error!", {
       status: 500,
