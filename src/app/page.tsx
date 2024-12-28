@@ -1,6 +1,6 @@
 "use client";
 export default async function Home() {
-  console.log(process.env.NODE_ENV);
+  console.log(process.env.REDIRECT_URL);
 
   const handleSignClick = () => {
     fetch("/api/getAuthUrl", {
