@@ -1,5 +1,4 @@
 import { oauth2Client } from "@/ultis/oauthClient";
-import { NextResponse } from "next/server";
 
 // google oauth2 callback 接口
 export async function GET(request: Request) {

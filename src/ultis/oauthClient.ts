@@ -8,5 +8,4 @@ const oauth2Client = new google.auth.OAuth2(
   CLIENT_SECRET,
   REDIRECT_URL
 );
-oauth2Client.generateAuthUrl;
 export { oauth2Client };
