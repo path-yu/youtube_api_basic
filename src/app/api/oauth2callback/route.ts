@@ -10,8 +10,6 @@ export async function GET(request: Request) {
   }
   try {
     // 重定向到首页传入code
-    console.log(process.env.NODE_ENV);
-
     let url =
       process.env.NODE_ENV == "development"
         ? "http://localhost:3000"
