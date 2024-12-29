@@ -12,10 +12,12 @@ export default async function Oauth2CallbackPage() {
   try {
     const { tokens } = await oauth2Client.getToken(code);
     oauth2Client.setCredentials(tokens);
+    console.log(tokens);
+
+    return renderSuccess("授权成功", code);
   } catch (error) {
     return renderError("授权失败");
   }
-  return renderSuccess("授权成功");
 }
 
 function renderError(message: string) {
@@ -23,17 +25,17 @@ function renderError(message: string) {
     <div className="flex justify-center flex-col w-full items-center h-screen">
       <div className="text-red-600">{message}</div>
       <a href="/" className="text-blue-300 text-base">
-        点击返回首页
+        点击返回
       </a>
     </div>
   );
 }
 
-function renderSuccess(message: string) {
+function renderSuccess(message: string, code: string) {
   return (
     <div className="flex justify-center flex-col w-full items-center h-screen">
       <div className="text-green-300">{message}</div>
-      <a href="/home" className="text-blue-300 text-base">
+      <a href={"/home?code=" + code} className="text-blue-300 text-base">
         点击返回首页
       </a>
     </div>

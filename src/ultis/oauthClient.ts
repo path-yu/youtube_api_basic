@@ -8,5 +8,11 @@ const oauth2Client = new google.auth.OAuth2(
   CLIENT_SECRET,
   REDIRECT_URL
 );
-//
+oauth2Client.on("tokens", (tokens) => {
+  console.log(tokens, "onrefreshing");
+
+  if (tokens.refresh_token) {
+    oauth2Client.refreshAccessToken();
+  }
+});
 export { oauth2Client };
