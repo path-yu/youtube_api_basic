@@ -14,7 +14,7 @@ export async function GET(request: Request) {
   return new Response("success", {
     status: 200,
     headers: {
-      "Set-Cookie": `access_token=${tokens.access_token}&refresh_token=${tokens.refresh_token}`,
+      "Set-Cookie": `access_token=${tokens.access_token}`,
     },
   });
 }
