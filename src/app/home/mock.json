@@ -1,0 +1,1706 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "79aK9CqO512Z7clLdiaYQu0MVVg",
+  "nextPageToken": "CDIQAA",
+  "regionCode": "HK",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yk-wKkYVJTbf671D23MU_x_Kfn4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8H609zqwHyI"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T21:46:51Z",
+        "channelId": "UCbLhGKVY-bJPcawebgtNfbw",
+        "title": "You Are Too Late To Invest In Crypto? Bitcoin Price In 1 Year Will Be...",
+        "description": "Crypto Warning: Is It Too Late To Invest? Bitcoin Price In 1 Year Will Be... Get 20k sats of bitcoin (~$15) when you make your ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8H609zqwHyI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8H609zqwHyI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8H609zqwHyI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Altcoin Daily",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-28T21:46:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pFGhxzLaM2kZtbpt7HuiN8byvtg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GFSymC3w_lo"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T12:06:56Z",
+        "channelId": "UCkkqXUQYUT0pC8RjZpfTZCQ",
+        "title": "Michael Saylor: BITCOIN BULL RUN READY TO BE CONFIRMED! BTC PRICE PREDICTION",
+        "description": "Michael Saylor, a vocal Bitcoin advocate and Executive Chairman of MicroStrategy, expresses his strong belief in a coming ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GFSymC3w_lo/default_live.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GFSymC3w_lo/mqdefault_live.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GFSymC3w_lo/hqdefault_live.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Rádio Tupi",
+        "liveBroadcastContent": "live",
+        "publishTime": "2024-12-28T12:06:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "v0PMp5qFdl4FhTUrQTljamyAXmA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1YyAzVmP9xQ"
+      },
+      "snippet": {
+        "publishedAt": "2021-06-29T15:30:00Z",
+        "channelId": "UCsvqVGtbbyHaMoevxPAq9Fg",
+        "title": "Cryptocurrency In 5 Minutes | Cryptocurrency Explained | What Is Cryptocurrency? | Simplilearn",
+        "description": "IITK - Professional Certificate Program in Blockchain (India Only) ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1YyAzVmP9xQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1YyAzVmP9xQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1YyAzVmP9xQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Simplilearn",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-06-29T15:30:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "h41cFN6IOu5U_IlfEamdFdl9rww",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tfuySgL36Zk"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T14:00:58Z",
+        "channelId": "UCqK_GSMbpiV8spgD3ZGloSw",
+        "title": "We Called It! Coin Bureau 2024 Predictions Reviewed",
+        "description": "As 2024 wraps up and 2025 approaches, now is the perfect time to look back and reflect. And let's be honest, 2024 will be a year ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tfuySgL36Zk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tfuySgL36Zk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tfuySgL36Zk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Coin Bureau",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-28T14:00:58Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3iIbr0sIgbRpU25pVlwykCCxWak",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SX6vMX-Vniw"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-05T01:23:59Z",
+        "channelId": "UCbLhGKVY-bJPcawebgtNfbw",
+        "title": "Top 21 crypto coins that will EXPLODE in 2025!!",
+        "description": "21 CRYPTO COINS YOU MUST HAVE FOR 2025!! (Last Chance) Best Crypto Exchange to Buy & Trade Bitcoin: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SX6vMX-Vniw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SX6vMX-Vniw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SX6vMX-Vniw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Altcoin Daily",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-05T01:23:59Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xbGmWFrMNnlXEq8GXWcMr09ryLQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3kVG4qori_0"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-26T23:00:03Z",
+        "channelId": "UCM5oQBEF59122yTblKUzCHQ",
+        "title": "&quot;IS THIS THE END FOR SHIBA INU?&quot; SHIBA INU COIN HOLDERS - THIS IMPACTS YOU!",
+        "description": "\"IS THIS THE END FOR SHIBA INU?\" SHIBA INU COIN HOLDERS - THIS IMPACTS YOU! GET AUSTIN'S TRADING ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3kVG4qori_0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3kVG4qori_0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3kVG4qori_0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Austin Hilton",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-26T23:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ilUKhcz5qbmZmWhwjwxVWDDvbjk",
+      "id": {
+        "kind": "youtube#channel",
+        "channelId": "UCqK_GSMbpiV8spgD3ZGloSw"
+      },
+      "snippet": {
+        "publishedAt": "2019-01-16T14:31:55Z",
+        "channelId": "UCqK_GSMbpiV8spgD3ZGloSw",
+        "title": "Coin Bureau",
+        "description": "The Coin Bureau is your go-to informational portal to the Cryptocurrency galaxy. Our mission is to facilitate the mass adoption of ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_mir_9R_w9VCBNv2_PZnY3Q5fm5tkr8c0EXFTMaG9nPMA=s88-c-k-c0xffffffff-no-rj-mo"
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_mir_9R_w9VCBNv2_PZnY3Q5fm5tkr8c0EXFTMaG9nPMA=s240-c-k-c0xffffffff-no-rj-mo"
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_mir_9R_w9VCBNv2_PZnY3Q5fm5tkr8c0EXFTMaG9nPMA=s800-c-k-c0xffffffff-no-rj-mo"
+          }
+        },
+        "channelTitle": "Coin Bureau",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-01-16T14:31:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kaW_Irlw4lElvj-xmQgcuk0BVmM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Bm8EBGjSIxo"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T00:00:22Z",
+        "channelId": "UCbLhGKVY-bJPcawebgtNfbw",
+        "title": "What is Bitcoin? Explained in 8 minutes",
+        "description": "Bitcoin explained for dummies. Ethereum simply explained. Best Crypto Exchange to Buy & Trade Altcoins: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Bm8EBGjSIxo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Bm8EBGjSIxo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Bm8EBGjSIxo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Altcoin Daily",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-28T00:00:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UEQmh23kXrtEn64Vpq-OfITMqMw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VYWc9dFqROI"
+      },
+      "snippet": {
+        "publishedAt": "2021-06-08T15:53:24Z",
+        "channelId": "UCqK_GSMbpiV8spgD3ZGloSw",
+        "title": "Explain Crypto To COMPLETE Beginners: Coin Bureau Guide!!",
+        "description": "Insider Info in my Socials https://guy.coinbureau.com/socials/ Coin Bureau Deals https://www.coinbureau.com/deals/ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VYWc9dFqROI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VYWc9dFqROI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VYWc9dFqROI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Coin Bureau",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-06-08T15:53:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "t0DUFfS_A92k_tRe3Kw4kYfqzQE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ex6zk3jjbaQ"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T10:00:41Z",
+        "channelId": "UCCIQF3SoMDkRPWHQie4pUFA",
+        "title": "Binance Confirmed Pi GCV Value Pi Network | Pi Coin | Pi Update | Pi Price | Crypto News | Albarizon",
+        "description": "New Channel Link  : https://youtube.com/@albarizone For Latest Update Join   Telegram Channel: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ex6zk3jjbaQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ex6zk3jjbaQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ex6zk3jjbaQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "albarizon",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-28T10:00:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YDaiEoXoCwebRVNyHI7WLwbVwVA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LGHsNaIv5os"
+      },
+      "snippet": {
+        "publishedAt": "2024-06-16T13:58:23Z",
+        "channelId": "UCL-QLzGmf468WAL1U-9g0qA",
+        "title": "How To Invest in Crypto as A COMPLETE Beginner [2024 GUIDE]",
+        "description": "My goal in this video is to show you EVERYTHING that I've learned over 7 years of trading & investing and show you how to be in ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LGHsNaIv5os/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LGHsNaIv5os/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LGHsNaIv5os/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Craig Percoco",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-06-16T13:58:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uWhLqWwki4IUQVVJwY95-yVjKhs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aLh8jlYYvZA"
+      },
+      "snippet": {
+        "publishedAt": "2022-08-22T09:59:18Z",
+        "channelId": "UC-OTgwOAI7KmP0eDAtqN3Ow",
+        "title": "Coins VS Tokens: What&#39;s the Difference? | 3-min crypto",
+        "description": "Coins and Tokens may seem similar on the surface, but they are fundamentally different. Coins have their own blockchains ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aLh8jlYYvZA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aLh8jlYYvZA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aLh8jlYYvZA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "CoinGecko",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-08-22T09:59:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "K3ykF_vF9qluG9bdC6D3e9EzRII",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "otNqQHpdVp4"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T00:00:36Z",
+        "channelId": "UCl2oCaw8hdR_kbqyqd2klIA",
+        "title": "2025 Price Predictions For Crypto [Bitcoin, Ethereum, Solana, XRP, and more]",
+        "description": "Insane 2025 crypto price predictions, BTC, ETH, SOL, DOGE, XRP! GET MY FREE NEWSLETTER ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/otNqQHpdVp4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/otNqQHpdVp4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/otNqQHpdVp4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Lark Davis",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-28T00:00:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cmKhHx7Kj0oVS3PirKz5UsgFzWc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_7CuCYuDc28"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T12:41:53Z",
+        "channelId": "UCyhWX-7YhDuHqAwAhATN5tw",
+        "title": "Best Coins To Buy For 2025 - Binance Se Paise Kaise Kamaye | How To Earn Daily From Binance | Crypto",
+        "description": "binance #crypto #trading Best Coins To Buy For 2025 - Binance Se Paise Kaise Kamaye | How To Earn Daily From Binance ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_7CuCYuDc28/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_7CuCYuDc28/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_7CuCYuDc28/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Mirani Gamer",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-28T12:41:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RvG36_VzpmGXWTJGh9_BM3qQ0iM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xpfRTOkUEu4"
+      },
+      "snippet": {
+        "publishedAt": "2023-05-20T23:30:08Z",
+        "channelId": "UCRukJuuBAdoHMTBIsFJAgvw",
+        "title": "🔥Is THIS The NEXT “PEPE” COIN?! 🐸 (urgent)  #Shorts",
+        "description": "Join The VIP Cryptocurrency Course and Discord Group: https://www.joeparys.com/yt/crypto-course. Is this the next “PEPE”?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xpfRTOkUEu4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xpfRTOkUEu4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xpfRTOkUEu4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Joe Parys Crypto",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-05-20T23:30:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dNSd6SeEQZVbfrq740qTwhQaQps",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zd_ggXQSaE0"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-29T02:38:56Z",
+        "channelId": "UC4c5FPpwCpb6q8J--i8QHtA",
+        "title": "Bitcoin Live Trading: Weekend Pump or Dump? Hot Altcoins Making GAINS EP 1491",
+        "description": "Channel Sponsor, ITrust Capital: https://itrust.capital/cryptolifer JOIN THE TRADING GROUP ➡️ https://www.cryptolifer.com ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zd_ggXQSaE0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zd_ggXQSaE0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zd_ggXQSaE0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Crypto Lifer",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-29T02:38:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pdxuy40lHRRtTTwjcNxfLywB5Oc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "D2c-cRr3Bzs"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-25T11:30:07Z",
+        "channelId": "UCl2oCaw8hdR_kbqyqd2klIA",
+        "title": "My Top 10 Crypto Coins For The 2025 Bull Run [These Will Make Millions]",
+        "description": "10 crypto altcoins with big potential in 2025. GET MY FREE NEWSLETTER https://cryptolark.co/SubscribeForFree ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/D2c-cRr3Bzs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/D2c-cRr3Bzs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/D2c-cRr3Bzs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Lark Davis",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-25T11:30:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NI088izvzZcdwoH02lguKS8hbiM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vLvn4aGweOo"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T18:40:21Z",
+        "channelId": "UCw2OA30Mobztf52r-dpYYTA",
+        "title": "PEPE COIN Price Prediction | PEPE Coin News - Meme Coin Pump in 2025?!",
+        "description": "Unlock OVER 500+ Trading Signals *PER MONTH* & Early Gem Calls in My Discord ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vLvn4aGweOo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vLvn4aGweOo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vLvn4aGweOo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Jacob Crypto Bury",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-28T18:40:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "fRXj86DLS6cqjhEQnVrBlYATCs0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Z1ryOwW0AdU"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-23T02:03:56Z",
+        "channelId": "UCbLhGKVY-bJPcawebgtNfbw",
+        "title": "Top 21 crypto coins UNDER $1 that will EXPLODE in 2025!!",
+        "description": "21 CRYPTO COINS UNDER $1 YOU MUST HAVE FOR 2025!? (Last Chance) Full Bells Video: https://youtu.be/2cRz51xscBU Full ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Z1ryOwW0AdU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Z1ryOwW0AdU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Z1ryOwW0AdU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Altcoin Daily",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-23T02:03:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HuqVD9bJe1Ua7U5gyrMOY7unD2c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JALQ0GiU94s"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-27T03:58:25Z",
+        "channelId": "UCr8uEbKAxiX0dVDejI0nufw",
+        "title": "2025 बना सकता है करोड़पति CRYPTO में ! कैसे बनाये PORTFOLIO, कौन से COINS रखें ! SHOCKING RESEARCH",
+        "description": "In this video, we will share one of our interesting research and share data showing that 2025 can be the big year for bitcoin and ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JALQ0GiU94s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JALQ0GiU94s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JALQ0GiU94s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Bitcoin Expert India",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-27T03:58:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CvZbGKkzQhfr6L4XT7jK_8AHMUQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GqiFwbcsL-A"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T03:00:16Z",
+        "channelId": "UCCIQF3SoMDkRPWHQie4pUFA",
+        "title": "Dubai Support Pi Network GCV Value | Pi Coin Update | Crypto News | Pi Listing News | Albarizon",
+        "description": "New Channel Link  : https://youtube.com/@albarizone For Latest Update Join   Telegram Channel: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GqiFwbcsL-A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GqiFwbcsL-A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GqiFwbcsL-A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "albarizon",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-28T03:00:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "991fXKgncXIiIlmsObp7Rgf0n3M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Sc4ExuEfRUQ"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-04T00:03:34Z",
+        "channelId": "UCEAZeUIeJs0IjQiqTCdVSIg",
+        "title": "Crypto: Why $XRP is ‘the banker’s coin’ #shorts",
+        "description": "Crypto: Why $XRP is 'the banker's coin' #shorts #yahoofinance #finance #news #youtubeshorts #youtube #shorts #shortsvideo ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Sc4ExuEfRUQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Sc4ExuEfRUQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Sc4ExuEfRUQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Yahoo Finance",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-04T00:03:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lU4JVZysUZuEDczPXuANi8fYQIY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "RBjfOr2eKJI"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-04T13:00:56Z",
+        "channelId": "UCWadGv7GpSiaDVwUh6JuI3A",
+        "title": "Penny Coins in Crypto!",
+        "description": "Crypto is a highly volatile and unregulated market. The information provided here is for educational purposes only and should not ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RBjfOr2eKJI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RBjfOr2eKJI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RBjfOr2eKJI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Jeet Crypto",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-04T13:00:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Tzifog4kmmk_U3EF_gqsHgrjGIM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tbB3SsvjYWY"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T23:34:40Z",
+        "channelId": "UCngIhBkikUe6e7tZTjpKK7Q",
+        "title": "Dogecoin Doge Crypto Price News Today  - Technical Analysis Now! Dogecoin Elliott Wave Analysis!",
+        "description": "Book your personalised technical analysis here: https://mcoglobal.com/product/technical-analysis-service/ 25% Discount Coupon: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tbB3SsvjYWY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tbB3SsvjYWY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tbB3SsvjYWY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "More Crypto Online",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-28T23:34:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UvhZHOxjjJj8K_IpVaOmX2a5elk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zRLlc7uEGAw"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-27T11:56:08Z",
+        "channelId": "UChwiV3-_Gu57hxZg1EGnpUA",
+        "title": "10 Coins Crypto Portfolio 2025 || Best Crypto to buy Now - Top Trending  Altcoins 2025 Hindi / Urdu",
+        "description": "10 Coins Crypto Portfolio 2025 || Best Crypto to buy Now - Top Trending Altcoins 2025 Hindi / Urdu Follow Crypto Notes on Social ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zRLlc7uEGAw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zRLlc7uEGAw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zRLlc7uEGAw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Crypto Notes",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-27T11:56:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gXU5IkJZi0mfDlkIIQtx1F4QGss",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vaVP6rUFq44"
+      },
+      "snippet": {
+        "publishedAt": "2024-03-15T07:21:05Z",
+        "channelId": "UCEiH9wAwqMVbPqz-RHp0xMg",
+        "title": "How many people own bitcoin in London?",
+        "description": "How many people own bitcoin in London? City A.M. hit Leadenhall Market to find out... #bitcoin #crypto #cryptocurrency #eft ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vaVP6rUFq44/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vaVP6rUFq44/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vaVP6rUFq44/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "City A.M.",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-03-15T07:21:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FfR5qgNhKHzV5ahkMAmuRG3EK8g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-bPxXF-34XE"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-26T23:00:00Z",
+        "channelId": "UCCXoCcu9Rp7NPbTzIvogpZg",
+        "title": "‘BITCOIN IS THE KING’: CEO breaks down future of crypto in USA",
+        "description": "Professional Capital Management founder and CEO Anthony Pompliano shares his thoughts on the future of crypto in the second ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-bPxXF-34XE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-bPxXF-34XE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-bPxXF-34XE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Fox Business",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-26T23:00:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kaZQN9UwG00FKibFiqXHCXqFxPQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JZk6T1TmIrs"
+      },
+      "snippet": {
+        "publishedAt": "2021-08-17T04:30:02Z",
+        "channelId": "UCEAAzv2OBqxsSczKJ2QZyGQ",
+        "title": "What is CryptoCurrency? | Everything About Bitcoin &amp; Cryptocurrencies Explained for Beginners",
+        "description": "In this video you will get to know everything you need to Know About Cryptocurrency, Investments in Bitcoin and Other ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JZk6T1TmIrs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JZk6T1TmIrs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JZk6T1TmIrs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Pushkar Raj Thakur: Stock Market Educator 📈",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-08-17T04:30:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sFTiDP26efyh760ehK3jqEEXnzg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "eAMEdnNPYrs"
+      },
+      "snippet": {
+        "publishedAt": "2024-10-28T13:22:02Z",
+        "channelId": "UCWadGv7GpSiaDVwUh6JuI3A",
+        "title": "Return On Investment in Coins",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eAMEdnNPYrs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eAMEdnNPYrs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eAMEdnNPYrs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Jeet Crypto",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-10-28T13:22:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "n1DG8oCO1iqSW3r-_Z7HbAH9xeY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bBC-nXj3Ng4"
+      },
+      "snippet": {
+        "publishedAt": "2017-07-07T16:51:37Z",
+        "channelId": "UCYO_jab_esuFRV4b17AJtAw",
+        "title": "But how does bitcoin actually work?",
+        "description": "The math behind cryptocurrencies. Help fund future projects: https://www.patreon.com/3blue1brown An equally valuable form of ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bBC-nXj3Ng4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bBC-nXj3Ng4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bBC-nXj3Ng4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "3Blue1Brown",
+        "liveBroadcastContent": "none",
+        "publishTime": "2017-07-07T16:51:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8e7jWVUm-IvITmrsOgLwCisEG9g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "41JCpzvnn_0"
+      },
+      "snippet": {
+        "publishedAt": "2018-04-04T11:44:45Z",
+        "channelId": "UCQQ_fGcMDxlKre3SEqEWrLA",
+        "title": "What is Bitcoin?  Bitcoin Explained Simply",
+        "description": "Is this the next 10X Potential Meme Coin (PEPE alternative!) - https://99bitcoins.care/b_PepeUnchained99B Start trading Bitcoin ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/41JCpzvnn_0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/41JCpzvnn_0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/41JCpzvnn_0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "99Bitcoins",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-04-04T11:44:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YFklWRm3wgjLjEr_3LybjXZnUKQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "XaNTEcUeocU"
+      },
+      "snippet": {
+        "publishedAt": "2021-02-09T14:53:44Z",
+        "channelId": "UC-JFyL0zDFOsPMpuWu39rPA",
+        "title": "கிரிப்டோ கரன்சி - பிட் காயின் என்றால் என்ன? | Cryptocurrency | Bitcoin",
+        "description": "Uploaded on 09/02/2021: கிரிப்டோ கரன்சி - பிட் காயின் என்றால் என்ன? | Cryptocurrency ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XaNTEcUeocU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XaNTEcUeocU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XaNTEcUeocU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Thanthi TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-02-09T14:53:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uEbc0SR6PYkqCqGPu1K2NUqtt_A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AwmIYCHqczM"
+      },
+      "snippet": {
+        "publishedAt": "2023-01-25T07:06:39Z",
+        "channelId": "UC4P9OWWU5yoZilR5_93_C7g",
+        "title": "Top cryptos to hold become a millionaire in 2025 | Crypto book",
+        "description": "Top cryptos to hold become a millionaire in 2025 | Crypto book #lunc #terralunaclassic #terraluna #luna #pinetwork ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AwmIYCHqczM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AwmIYCHqczM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AwmIYCHqczM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Crypto Book",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-01-25T07:06:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Lr18NZc3G_ZBRw6Q-xdcj3GVz_s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oqyX3dBXb8k"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-04T01:16:05Z",
+        "channelId": "UCMtJYS0PrtiUwlk6zjGDEMA",
+        "title": "Why Altcoins Will Explode 📈",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oqyX3dBXb8k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oqyX3dBXb8k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oqyX3dBXb8k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "EllioTrades",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-04T01:16:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XEMAFzLx_xTgHs34uQi3w1j160s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HTtlzcvDEos"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-07T04:15:02Z",
+        "channelId": "UCD61jhpZD-6jG6QmY6Il1cQ",
+        "title": "Top 5 crypto coins under 1 Dollar for 2025",
+        "description": "Top 5 crypto coins under 1 Dollar.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HTtlzcvDEos/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HTtlzcvDEos/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HTtlzcvDEos/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Money Talks",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-07T04:15:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "eRnIuxTClMZEnuALbum_P8RlhiI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aSZHQtGWe74"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-25T14:00:01Z",
+        "channelId": "UCqK_GSMbpiV8spgD3ZGloSw",
+        "title": "Wall Street&#39;s Secret Plan For Crypto: What The Banks Are Doing!!",
+        "description": "Big banks and crypto: will they or won't they? Top banks on Wall Street have been flirting with blockchains and crypto for the best ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aSZHQtGWe74/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aSZHQtGWe74/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aSZHQtGWe74/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Coin Bureau",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-25T14:00:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zJ25z58Fou6iDL7GDtUsBk8vTl8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "V4lScsjToxA"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-17T14:41:25Z",
+        "channelId": "UCo_xHWmMxdodlIufRlZzRPw",
+        "title": "💰Top 5 Crypto For High Returns🔥#crypto #cryptocurrency #trading",
+        "description": "The Bullrun has started and it's the right time to buy crypto for high returns   . Watch the video till end to know   . Comment down ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/V4lScsjToxA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/V4lScsjToxA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/V4lScsjToxA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DeepakWadhwa.Official",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-17T14:41:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9eNgrJNHkthHgWqHStMxmyPV2Ic",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Y9DbcMG8j8A"
+      },
+      "snippet": {
+        "publishedAt": "2022-09-23T19:26:31Z",
+        "channelId": "UCorUaC22pinhK07jpIiU0Ww",
+        "title": "This is the largest USB Bitcoin Mining Setup in the world! |#Shorts | How Much?",
+        "description": "https://bitcoinmerch.com/products/gekkoscience-compac-f-fan-upgrade-combo-up-to-270gh-s This is the largest USB Bitcoin ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Y9DbcMG8j8A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Y9DbcMG8j8A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Y9DbcMG8j8A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "How Much?",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-09-23T19:26:31Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7AMbfTo26DepedvTyFTc8aUOHMM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2wb45fpOHgk"
+      },
+      "snippet": {
+        "publishedAt": "2024-04-01T21:26:40Z",
+        "channelId": "UCKQvGU-qtjEthINeViNbn6A",
+        "title": "3 100x AI Crypto Coins That Will PUMP By May",
+        "description": "Shorts.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2wb45fpOHgk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2wb45fpOHgk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2wb45fpOHgk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Alex Becker's Channel",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-04-01T21:26:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NJSH1CH2sBwDH5PYWCHmjrfb_-c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1Y20Vw9llKw"
+      },
+      "snippet": {
+        "publishedAt": "2024-09-18T16:22:46Z",
+        "channelId": "UCYyOG3wS30RxOKoIIerKGcg",
+        "title": "Best Crypto prediction for 2025 #cryptocurrency",
+        "description": "Crypto Price Prediction 2025: What's Next for Bitcoin, Ethereum, and More? Best crypto prediction 2024 #cryptocurrency ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1Y20Vw9llKw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1Y20Vw9llKw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1Y20Vw9llKw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Daily crypto predictions",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-09-18T16:22:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mkxkb3CI_ASx7DqEP8JYlaxR2yE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "XlmBLQHcqfY"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-27T15:32:47Z",
+        "channelId": "UCOG-sB9MKFiRc6GbW5SAptg",
+        "title": "2025 Bull Run My Crypto Portfolio Strategy: Top 10 Coins List 🚀| 2025 best Altcoin portfolio",
+        "description": "Join Free Telegram channel for Educational purpose. Link : https://t.me/learnwithronykapoor Our Social media links. ✓Youtube ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XlmBLQHcqfY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XlmBLQHcqfY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XlmBLQHcqfY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Learn with Rony kapoor",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-27T15:32:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rFO6W9UDn6IzaQyGR3ACZmr1nGc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "v1CRcnO1ZJE"
+      },
+      "snippet": {
+        "publishedAt": "2023-05-21T10:45:03Z",
+        "channelId": "UCrDU-ppTkqMgZA3lAtySxKg",
+        "title": "PEPE Coin Price Prediction 2024",
+        "description": "PEPE Coin Price Prediction 2023 If you loved the video, Make sure to LIKE Smash that SUBSCRIBE ❤️ button ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/v1CRcnO1ZJE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/v1CRcnO1ZJE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/v1CRcnO1ZJE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Crypto Review",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-05-21T10:45:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hr0nPraQvv8M9aaeXGRTYWDzi2Q",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PL6xxyNiKuShu1Ztk9vhG0LJb9BE_mJhrq"
+      },
+      "snippet": {
+        "publishedAt": "2018-01-26T17:32:03Z",
+        "channelId": "UCL9RiCSlIhu6f1JbK943CgQ",
+        "title": "Hướng dẫn Phân tích kỹ thuật - Trade Coin",
+        "description": "Ở trong List hướng dẫn phân tích kỹ thuật trade coin này, Alden sẽ chia sẻ với các bạn những phương pháp, những công cụ cực ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/akR1z4lyZ18/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/akR1z4lyZ18/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/akR1z4lyZ18/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Đầu tư Trade Coin",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-01-26T17:32:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_EHIThDOAIntUJvGQ2AkFpC2MBM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ux6E4GSmyt0"
+      },
+      "snippet": {
+        "publishedAt": "2022-11-10T06:30:09Z",
+        "channelId": "UCRzYN32xtBf3Yxsx5BvJWJw",
+        "title": "Don&#39;t Invest in Crypto THE WRONG WAY - 3 TIPS! | Ankur Warikoo #shorts",
+        "description": "SIP in Stocks with FREE* Demat A/c on INDmoney: https://indmoney.onelink.me/RmHC/x3g6i4vs My Money Apps: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ux6E4GSmyt0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ux6E4GSmyt0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ux6E4GSmyt0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "warikoo",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-11-10T06:30:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lPKriAPjobLbhRZnnreU1XGyBEY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cXJ2QUzVHv0"
+      },
+      "snippet": {
+        "publishedAt": "2024-06-25T10:41:35Z",
+        "channelId": "UCaVpewfwXNRMfVi763jXVTg",
+        "title": "How to pick THE coin to trade  #trading #memecoins #solana #crypto",
+        "description": "Not financial advise bro. BullX trading: https://t.me/BullxBetaBot?start=acces... photon trading: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cXJ2QUzVHv0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cXJ2QUzVHv0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cXJ2QUzVHv0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "darius",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-06-25T10:41:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "o23lJSGAbqtn11KDDeKVBI9yKK8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bZbTVYyes2A"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-06T01:06:36Z",
+        "channelId": "UC4IIEurSuBJ_a1ZPNJK939g",
+        "title": "Haliey Welch releases a crypto coin HAWK, and It PLUMMETED",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bZbTVYyes2A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bZbTVYyes2A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bZbTVYyes2A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "You Won’t Believe Me",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-06T01:06:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "10mmwcR95-lxb5_n7klZEwkxm1o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "u5tc2BeQnDI"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-28T15:36:14Z",
+        "channelId": "UChWftKUs7F8Au7fyZUHrnzA",
+        "title": "Krypto Panik: MASSIVE Fehlinformationen im Umlauf! Bitcoin News",
+        "description": "10% Steuern & Tracking ➟ CoinTracking https://bit.ly/3yguBzw 10€ Bonus ➟ Bitvavo powered by Hyphe: https://bit.ly/3Tnogxz ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/u5tc2BeQnDI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/u5tc2BeQnDI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/u5tc2BeQnDI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "RobynHD",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-28T15:36:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "qVvB77VFAbQkHyNAkPP3qX_EuEQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UlpSubIH-Wk"
+      },
+      "snippet": {
+        "publishedAt": "2022-06-14T14:57:45Z",
+        "channelId": "UC7qxuJnsADaskQrIBvtBdrA",
+        "title": "Bitcoin Prediction",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UlpSubIH-Wk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UlpSubIH-Wk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UlpSubIH-Wk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "MetaverseMentors",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-06-14T14:57:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cvyx3vTbq786VFyy1WGGAz2v0fw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4gvOJvOMUlg"
+      },
+      "snippet": {
+        "publishedAt": "2023-02-03T15:00:03Z",
+        "channelId": "UCM5oQBEF59122yTblKUzCHQ",
+        "title": "3,300,000,000,000 Shiba Inu! WHAT?! #shiba #shibainu #shibacoin",
+        "description": "CHANNEL SPONSOR - TRADIX! Tradix is the first app of its kind allowing users to search, review, and set custom price alerts for ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4gvOJvOMUlg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4gvOJvOMUlg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4gvOJvOMUlg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Austin Hilton",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-02-03T15:00:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Qch5r1vjYj6-vLLDpaJGibfByPA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qTGMe_S0gPw"
+      },
+      "snippet": {
+        "publishedAt": "2021-05-10T14:11:23Z",
+        "channelId": "UCQlJNNzXZ2WyAxQIpm5aILw",
+        "title": "Free Cryptocurrency for everyone “Pi Coin” Next bitcoin of future #shorts",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qTGMe_S0gPw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qTGMe_S0gPw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qTGMe_S0gPw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "idea____Man",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-05-10T14:11:23Z"
+      }
+    }
+  ]
+}
