@@ -5,7 +5,11 @@ export async function GET(request: Request) {
   //
   const url = oauth2Client.generateAuthUrl({
     access_type: "offline",
-    scope: ["  https://www.googleapis.com/auth/youtube.readonly"],
+    prompt: "consent",
+    scope: [
+      "https://www.googleapis.com/auth/youtube.readonly",
+      "https://www.googleapis.com/auth/youtube.force-ssl",
+    ],
   });
   return Response.json({ url });
 }

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -18,4 +18,71 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+} */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(32, 32, 32, 0.9);
+  border-radius: 20px;
+  z-index: 99;
+}
+
+.search-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 40px 8px 16px;
+  /* background-color: rgba(32, 32, 32, 0.9); */
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-input:focus {
+  background-color: rgba(40, 40, 40, 0.95);
+}
+
+.search-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: #888;
+  transition: color 0.2s ease;
+}
+.delete-icon {
+  color: #888;
+}
+.delete-icon:hover {
+  color: #fff;
+}
+.search-icon :hover {
+  color: #fff;
+}
+
+/* Remove default search input styles */
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-results-button,
+.search-input::-webkit-search-results-decoration {
+  display: none;
 }

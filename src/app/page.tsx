@@ -1,5 +1,7 @@
 "use client";
 
+import { Button } from "@nextui-org/button";
+
 export default function Home() {
   const handleSignClick = () => {
     fetch("/api/getAuthUrl", {
@@ -12,7 +14,9 @@ export default function Home() {
   };
   return (
     <div className="flex w-[100vw] h-[100vh] justify-center items-center">
-      <button onClick={handleSignClick}>使用 Google 登录</button>
+      <Button color="primary" onPress={handleSignClick}>
+        使用 Google 登录
+      </Button>
     </div>
   );
 }
