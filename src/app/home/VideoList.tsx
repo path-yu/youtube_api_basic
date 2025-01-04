@@ -5,8 +5,9 @@ import { searchVideoList } from "../../action";
 import { Spinner } from "@nextui-org/react";
 import useAppStore from "../store";
 import { formateNow } from "@/ultis";
-import { Checkbox } from "@nextui-org/react";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+// import { Checkbox } from "@nextui-org/react";
+import { Progress } from "@nextui-org/progress";
+import { Card, CardBody } from "@nextui-org/card";
 import { YouTubeVideo } from "../types/api";
 export interface VideoListProps {
   videoList: YouTubeVideo[];

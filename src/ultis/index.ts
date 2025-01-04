@@ -6,3 +6,6 @@ dayjs.locale("zh-cn"); // 全局使用
 export function formateNow(date: string | number) {
   return dayjs(date).fromNow();
 }
+export function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}

@@ -13,27 +13,42 @@ import { Textarea } from "@nextui-org/input";
 import { useState } from "react";
 import useAppStore from "../store";
 import { insertComment } from "@/action";
+import { Progress } from "@nextui-org/progress";
+import { sleep } from "@/ultis";
+
 export default function AddComment() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [comment, setComment] = useState("非常好的视频");
+  const [comment, setComment] = useState("");
   const [loading, setLoading] = useState(false);
   const list = useAppStore((state) => state.videoList);
+  // 发送评论进度
+  const [progress, setProgress] = useState(0);
   const handleSubmit = async (onClose: () => void) => {
-    // message.info("success");
     setLoading(true);
-    // 每隔2s添加评论请求
-    const res = await insertComment(
-      list[0].id.videoId,
-      comment || "非常好的视频"
+    setProgress(0);
+    addCommentsWithRandomDelay(
+      list.map((item) => item.id.videoId).slice(0, 5),
+      comment,
+      onClose
     );
-    console.log(res);
-
-    if (!res) {
-      // message.error("添加评论失败");
-    }
-    onClose();
-    setLoading(false);
   };
+  async function addCommentsWithRandomDelay(
+    videoIds: string[],
+    comment: string,
+    onClose: () => void
+  ) {
+    for (const videoId of videoIds) {
+      const delay = Math.floor(Math.random() * 500) + 500; // 随机生成 500-10000的延迟
+      console.log(`Adding comment to ${videoId} after ${delay} milliseconds`);
+      await sleep(delay);
+      setProgress((prev) => prev + 100 / videoIds.length);
+      // await insertComment(videoId, comment);
+    }
+    setLoading(false);
+    setProgress(0);
+    await sleep(300);
+    onClose();
+  }
 
   return (
     <div className="fixed top-[45vh] right-[20px]">
@@ -49,7 +64,12 @@ export default function AddComment() {
       >
         <PlusIcon></PlusIcon>
       </Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal
+        isDismissable={false}
+        backdrop="blur"
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+      >
         <ModalContent>
           {(onClose) => (
             <>
@@ -57,6 +77,16 @@ export default function AddComment() {
                 添加评论
               </ModalHeader>
               <ModalBody>
+                {progress != 0 && (
+                  <Progress
+                    aria-label="正在发送评论..."
+                    className="max-w-md"
+                    color="success"
+                    showValueLabel={true}
+                    size="md"
+                    value={progress}
+                  />
+                )}
                 <Textarea
                   value={comment}
                   onValueChange={setComment}

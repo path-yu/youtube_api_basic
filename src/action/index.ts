@@ -1,8 +1,6 @@
 "use server";
-import { Credentials } from "@/app/types/api";
 import { oauth2Client } from "@/ultis/oauthClient";
 import { google } from "googleapis";
-import { cookies } from "next/headers";
 
 async function searchVideoList(value: string) {
   try {
@@ -11,6 +9,7 @@ async function searchVideoList(value: string) {
       part: ["snippet"],
       q: value,
       type: ["video"],
+      order: "date",
       maxResults: 100,
     });
     return response.data.items;
@@ -37,6 +36,8 @@ async function insertComment(videoId: string, comment: string) {
     });
     return response.data;
   } catch (error) {
+    console.log(error);
+
     return null;
   }
 }
