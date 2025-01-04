@@ -9,8 +9,6 @@ export default async function Oauth2CallbackPage() {
   if (!code) {
     return renderError("No Code Provided");
   }
-  console.log(headersList);
-
   // sing code
   const res = await fetch(
     `${headersList.get("x-forwarded-proto")}://${headersList.get(
