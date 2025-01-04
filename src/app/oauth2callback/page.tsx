@@ -9,7 +9,6 @@ export default async function Oauth2CallbackPage() {
   if (!code) {
     return renderError("No Code Provided");
   }
-  // sing code
   const res = await fetch(
     `${headersList.get("x-forwarded-proto")}://${headersList.get(
       "host"
@@ -18,6 +17,8 @@ export default async function Oauth2CallbackPage() {
       method: "GET",
     }
   );
+  console.log(res, "sign result ");
+
   const result = await res.json();
   if (result["success"]) {
     return renderSuccess("授权成功", code);
