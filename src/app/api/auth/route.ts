@@ -11,6 +11,7 @@ export async function GET(request: NextRequest) {
     setCookie(tokens);
     return Response.json({ success: true });
   } catch (error) {
+    console.log(error, "getToken error");
     return Response.json({ success: false });
   }
 }

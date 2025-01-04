@@ -12,14 +12,13 @@ export default async function Oauth2CallbackPage() {
   const res = await fetch(
     `${headersList.get("x-forwarded-proto")}://${headersList.get(
       "host"
-    )}/api/auth`,
+    )}/api/auth?code=${code}`,
     {
       method: "GET",
     }
   );
-  console.log(res, "sign result ");
-
   const result = await res.json();
+  console.log(result["success"], "sign result ");
   if (result["success"]) {
     return renderSuccess("授权成功", code);
   } else {
