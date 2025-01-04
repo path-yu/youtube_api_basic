@@ -22,6 +22,8 @@ export default async function Oauth2CallbackPage() {
   if (currentPath) {
     currentPagePath = currentPath;
   }
+  const cookieStore = await cookies();
+  const access_token = cookieStore.get("access_token");
 
   const url = new URL(currentPagePath);
   const code = url.searchParams.get("code");
@@ -29,16 +31,23 @@ export default async function Oauth2CallbackPage() {
     return renderError("No Code Provided");
   }
   try {
-    const { tokens } = await oauth2Client.getToken(code!);
-    const bindServerAction = setCookieAction.bind(null, tokens as Credentials);
-    return (
-      <>
-        {renderSuccess("授权成功")}
-        <ServerAction action={bindServerAction}></ServerAction>
-      </>
-    );
+    if (access_token) {
+      return renderSuccess("授权成功");
+    } else {
+      const { tokens } = await oauth2Client.getToken(code!);
+      const bindServerAction = setCookieAction.bind(
+        null,
+        tokens as Credentials
+      );
+      return (
+        <>
+          {renderSuccess("授权成功")}
+          <ServerAction action={bindServerAction}></ServerAction>
+        </>
+      );
+    }
   } catch (error) {
-    return renderError("失败");
+    return renderError("授权失败");
   }
 }
 
