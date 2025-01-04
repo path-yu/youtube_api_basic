@@ -1,8 +1,6 @@
-import { oauth2Client } from "@/ultis/oauthClient";
 import { headers } from "next/headers";
 import Link from "next/link";
 import React from "react";
-import { setCookie } from "@/action/action";
 
 export default async function Oauth2CallbackPage() {
   const headersList = await headers();
@@ -11,12 +9,21 @@ export default async function Oauth2CallbackPage() {
   if (!code) {
     return renderError("No Code Provided");
   }
+  console.log(headersList);
+
   // sing code
-  try {
-    const { tokens } = await oauth2Client.getToken(code!);
-    setCookie(tokens);
+  const res = await fetch(
+    `${headersList.get("x-forwarded-proto")}://${headersList.get(
+      "host"
+    )}/api/auth`,
+    {
+      method: "GET",
+    }
+  );
+  const result = await res.json();
+  if (result["success"]) {
     return renderSuccess("授权成功", code);
-  } catch (error) {
+  } else {
     return renderError("授权失败");
   }
 }

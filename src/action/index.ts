@@ -20,7 +20,6 @@ async function searchVideoList(value: string) {
 }
 async function setCookie(token: Credentials) {
   const cookieStore = await cookies();
-  token.access_token;
   cookieStore.set("access_token", token.access_token!);
   cookieStore.set("refresh_token", token.refresh_token!);
   cookieStore.set("scope", token.scope!);

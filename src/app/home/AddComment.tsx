@@ -12,7 +12,7 @@ import { PlusIcon } from "lucide-react";
 import { Textarea } from "@nextui-org/input";
 import { useState } from "react";
 import useAppStore from "../store";
-import { insertComment } from "@/action/action";
+import { insertComment } from "@/action";
 export default function AddComment() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [comment, setComment] = useState("非常好的视频");

@@ -1,7 +1,7 @@
 "use client";
 import obverser from "@/ultis/obverser";
 import { useEffect, useState } from "react";
-import { searchVideoList } from "../../action/action";
+import { searchVideoList } from "../../action";
 import { Spinner } from "@nextui-org/react";
 import useAppStore from "../store";
 import { formateNow } from "@/ultis";
