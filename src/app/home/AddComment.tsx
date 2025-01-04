@@ -42,7 +42,7 @@ export default function AddComment() {
       console.log(`Adding comment to ${videoId} after ${delay} milliseconds`);
       await sleep(delay);
       setProgress((prev) => prev + 100 / videoIds.length);
-      // await insertComment(videoId, comment);
+      await insertComment(videoId, comment);
     }
     setLoading(false);
     setProgress(0);
