@@ -7,7 +7,6 @@ import mockData from "./mock.json";
 import SearchBar from "./SearchBar";
 import VideoList from "./VideoList";
 import AddComment from "./AddComment";
-import { setCookie } from "@/action";
 import { YouTubeVideo } from "../types/api";
 // const testToken = {
 //   access_token:

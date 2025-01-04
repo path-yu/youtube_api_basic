@@ -1,28 +1,44 @@
-import { headers } from "next/headers";
+"use server";
+import ServerAction from "@/componets/ServerAction";
+import { cookies, headers } from "next/headers";
 import Link from "next/link";
 import React from "react";
-
+import { Credentials } from "../types/api";
+import { oauth2Client } from "@/ultis/oauthClient";
+let currentPagePath: string;
 export default async function Oauth2CallbackPage() {
+  async function setCookieAction(tokens: Credentials) {
+    "use server";
+    const cookieStore = await cookies();
+    cookieStore.set("access_token", tokens.access_token!);
+    cookieStore.set("refresh_token", tokens.refresh_token!);
+    cookieStore.set("scope", tokens.scope!);
+    cookieStore.set("token_type", tokens.token_type!);
+    cookieStore.set("expiry_date", tokens.expiry_date!.toString());
+  }
   const headersList = await headers();
-  const url = new URL(headersList.get("x-current-path") as string);
+  let currentPath = headersList.get("x-current-path") as string;
+  // 缓存因为服务端组件注入了客户端组件 导致触发二次render 第二次无法获取headers path
+  if (currentPath) {
+    currentPagePath = currentPath;
+  }
+
+  const url = new URL(currentPagePath);
   const code = url.searchParams.get("code");
   if (!code) {
     return renderError("No Code Provided");
   }
-  const res = await fetch(
-    `${headersList.get("x-forwarded-proto")}://${headersList.get(
-      "host"
-    )}/api/auth?code=${code}`,
-    {
-      method: "GET",
-    }
-  );
-  const result = await res.json();
-  console.log(result["success"], "sign result ");
-  if (result["success"]) {
-    return renderSuccess("授权成功", code);
-  } else {
-    return renderError("授权失败");
+  try {
+    const { tokens } = await oauth2Client.getToken(code!);
+    const bindServerAction = setCookieAction.bind(null, tokens as Credentials);
+    return (
+      <>
+        {renderSuccess("授权成功")}
+        <ServerAction action={bindServerAction}></ServerAction>
+      </>
+    );
+  } catch (error) {
+    return renderError("失败");
   }
 }
 
@@ -37,7 +53,7 @@ function renderError(message: string) {
   );
 }
 
-function renderSuccess(message: string, code: string) {
+function renderSuccess(message: string) {
   return (
     <div className="flex justify-center flex-col w-full items-center h-screen">
       <div className="text-green-300">{message}</div>

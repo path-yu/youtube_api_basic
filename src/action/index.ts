@@ -1,8 +1,8 @@
 "use server";
+import { Credentials } from "@/app/types/api";
 import { oauth2Client } from "@/ultis/oauthClient";
 import { google } from "googleapis";
 import { cookies } from "next/headers";
-import { Credentials } from "../app/types/api";
 
 async function searchVideoList(value: string) {
   try {
@@ -17,14 +17,6 @@ async function searchVideoList(value: string) {
   } catch (error) {
     return [];
   }
-}
-async function setCookie(token: Credentials) {
-  const cookieStore = await cookies();
-  cookieStore.set("access_token", token.access_token!);
-  cookieStore.set("refresh_token", token.refresh_token!);
-  cookieStore.set("scope", token.scope!);
-  cookieStore.set("token_type", token.token_type!);
-  cookieStore.set("expiry_date", token.expiry_date!.toString());
 }
 // 插入评论
 async function insertComment(videoId: string, comment: string) {
@@ -49,4 +41,4 @@ async function insertComment(videoId: string, comment: string) {
   }
 }
 
-export { searchVideoList, setCookie, insertComment };
+export { searchVideoList, insertComment };

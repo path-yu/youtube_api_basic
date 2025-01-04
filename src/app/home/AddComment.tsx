@@ -26,6 +26,8 @@ export default function AddComment() {
       list[0].id.videoId,
       comment || "非常好的视频"
     );
+    console.log(res);
+
     if (!res) {
       // message.error("添加评论失败");
     }
