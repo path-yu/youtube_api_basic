@@ -1,15 +1,18 @@
 "use client";
 import SingGoogleButton from "@/componets/SingGoogleButton";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Spinner } from "@nextui-org/react";
 export default function Home() {
-  const access_token = localStorage.getItem("access_token");
+  const [access_token, setToken] = useState("");
   const router = useRouter();
 
   useEffect(() => {
-    if (access_token) {
-      router.push("/home");
+    if (localStorage.getItem("access_token")) {
+      setToken(localStorage.getItem("access_token")!);
+      setTimeout(() => {
+        router.push("/home");
+      }, 200);
     }
   }, []);
   return (

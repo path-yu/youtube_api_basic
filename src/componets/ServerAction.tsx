@@ -12,12 +12,14 @@ export default function ServerAction({
 }) {
   useEffect(() => {
     action();
-    // 使用 localStorage 设置token
-    localStorage.setItem("access_token", tokens.access_token!);
-    localStorage.setItem("refresh_token", tokens.refresh_token!);
-    localStorage.setItem("expires_in", tokens.expiry_date + "");
-    localStorage.setItem("scope", tokens.scope!);
-    localStorage.setItem("token_type", tokens.token_type!);
+    if (typeof window !== "undefined") {
+      // 使用 localStorage 设置token
+      localStorage.setItem("access_token", tokens.access_token!);
+      localStorage.setItem("refresh_token", tokens.refresh_token!);
+      localStorage.setItem("expires_in", tokens.expiry_date + "");
+      localStorage.setItem("scope", tokens.scope!);
+      localStorage.setItem("token_type", tokens.token_type!);
+    }
   }, []);
 
   return <></>;
