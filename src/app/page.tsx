@@ -1,26 +1,26 @@
 "use client";
-
-import { Button } from "@nextui-org/button";
-import { useState } from "react";
-
+import SingGoogleButton from "@/componets/SingGoogleButton";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { Spinner } from "@nextui-org/react";
 export default function Home() {
-  const [btnLoading, setBtnLoading] = useState(false);
-  const handleSignClick = () => {
-    setBtnLoading(true);
-    fetch("/api/getAuthUrl", {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setBtnLoading(false);
-        window.location.href = data.url;
-      });
-  };
+  const access_token = localStorage.getItem("access_token");
+  const router = useRouter();
+
+  useEffect(() => {
+    if (access_token) {
+      router.push("/home");
+    }
+  }, []);
   return (
     <div className="flex w-[100vw] h-[100vh] justify-center items-center">
-      <Button isLoading={btnLoading} color="primary" onPress={handleSignClick}>
-        使用 Google 登录
-      </Button>
+      {access_token ? (
+        <div className="text-lg text-gray-300 flex items-center">
+          <Spinner label="Loading..." size="md" />
+        </div>
+      ) : (
+        <SingGoogleButton></SingGoogleButton>
+      )}
     </div>
   );
 }

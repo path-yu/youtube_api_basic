@@ -1,6 +1,7 @@
 "use server";
 import { oauth2Client } from "@/ultis/oauthClient";
 import { google } from "googleapis";
+import { cookies } from "next/headers";
 
 async function searchVideoList(value: string) {
   try {
@@ -41,5 +42,14 @@ async function insertComment(videoId: string, comment: string) {
     return null;
   }
 }
-
-export { searchVideoList, insertComment };
+async function logOutAction() {
+  const cookie = await cookies();
+  // 删除所有cookie
+  cookie.delete("access_token");
+  cookie.delete("refresh_token");
+  cookie.delete("scope");
+  cookie.delete("token_type");
+  cookie.delete("expiry_date");
+  await oauth2Client.revokeCredentials();
+}
+export { searchVideoList, insertComment, logOutAction };

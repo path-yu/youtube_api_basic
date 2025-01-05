@@ -20,17 +20,13 @@ export default function AddComment() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [comment, setComment] = useState("");
   const [loading, setLoading] = useState(false);
-  const list = useAppStore((state) => state.videoList);
+  const list = useAppStore((state) => state.selectedVideoList);
   // 发送评论进度
   const [progress, setProgress] = useState(0);
   const handleSubmit = async (onClose: () => void) => {
     setLoading(true);
     setProgress(0);
-    addCommentsWithRandomDelay(
-      list.map((item) => item.id.videoId).slice(0, 5),
-      comment,
-      onClose
-    );
+    addCommentsWithRandomDelay(list, comment, onClose);
   };
   async function addCommentsWithRandomDelay(
     videoIds: string[],
@@ -51,17 +47,8 @@ export default function AddComment() {
   }
 
   return (
-    <div className="fixed top-[45vh] right-[20px]">
-      <Button
-        color="primary"
-        onPress={onOpen}
-        isIconOnly
-        style={{
-          borderRadius: "50%",
-          height: "60px",
-          width: "60px",
-        }}
-      >
+    <div className="">
+      <Button color="primary" onPress={onOpen} isIconOnly>
         <PlusIcon></PlusIcon>
       </Button>
       <Modal

@@ -42,7 +42,10 @@ export default async function Oauth2CallbackPage() {
       return (
         <>
           {renderSuccess("授权成功")}
-          <ServerAction action={bindServerAction}></ServerAction>
+          <ServerAction
+            action={bindServerAction}
+            tokens={tokens}
+          ></ServerAction>
         </>
       );
     }
