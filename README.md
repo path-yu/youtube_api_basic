@@ -1,3 +1,4 @@
+This is a basic project showing how to call the YouTube Data API using NextJs, completes Oauth2 login and realizes simple use of search and add comment interfaces.
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
