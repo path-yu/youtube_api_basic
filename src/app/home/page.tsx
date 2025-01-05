@@ -2,7 +2,7 @@
 import { oauth2Client } from "@/ultis/oauthClient";
 import { google } from "googleapis";
 import { cookies } from "next/headers";
-import items from "./mock.json";
+// import items from "./mock.json";
 import SearchBar from "./SearchBar";
 import VideoList from "./VideoList";
 import AddComment from "./AddComment";
