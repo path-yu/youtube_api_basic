@@ -1,15 +1,14 @@
 "use client";
 
-import { Delete, DeleteIcon, LogOut, Search } from "lucide-react";
+import { Delete, LogOut, Search } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { SearchBarProps } from "../types/search";
 import obverser from "@/ultis/obverser";
-import { Checkbox } from "@nextui-org/checkbox";
 import AddComment from "./AddComment";
 import { Button } from "@nextui-org/button";
-import { oauth2Client } from "@/ultis/oauthClient";
 import { logOutAction } from "@/action";
 import { useRouter } from "next/navigation";
+import { oauth2Client } from "@/ultis/oauthClient";
 
 export default function SearchBar(props: SearchBarProps) {
   const { placeholder = "搜索" } = props;
@@ -20,19 +19,23 @@ export default function SearchBar(props: SearchBarProps) {
     e.preventDefault();
     obverser.emit("search", searchValue);
   };
+  function clearStorage() {
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("refresh_token");
+    localStorage.removeItem("expires_in");
+    localStorage.removeItem("scope");
+    localStorage.removeItem("token_type");
+  }
   const handleLogOut = async () => {
     try {
       setBtnLoading(true);
       await logOutAction();
-      localStorage.removeItem("access_token");
-      localStorage.removeItem("refresh_token");
-      localStorage.removeItem("expires_in");
-      localStorage.removeItem("scope");
-      localStorage.removeItem("token_type");
+      clearStorage();
       setBtnLoading(false);
       router.push("/");
     } catch (error) {
       setBtnLoading(false);
+      clearStorage();
       router.push("/");
     }
   };

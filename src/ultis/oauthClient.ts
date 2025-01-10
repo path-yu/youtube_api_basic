@@ -10,6 +10,7 @@ const oauth2Client = new google.auth.OAuth2(
 );
 
 oauth2Client.on("tokens", (tokens) => {
+  // copy token for test
   console.log(tokens, "onrefreshing");
 
   // if (tokens.refresh_token) {

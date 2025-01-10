@@ -5,15 +5,18 @@ import { cookies } from "next/headers";
 // import items from "./mock.json";
 import SearchBar from "./SearchBar";
 import VideoList from "./VideoList";
-import AddComment from "./AddComment";
 import { YouTubeVideo } from "../types/api";
 import Link from "next/link";
-
+const testToken = {};
 export default async function HomePage() {
   const cookieStore = await cookies();
   const access_token = cookieStore.get("access_token");
+  // const access_token =
+  //   cookieStore.get("access_token") || testToken.access_token;
   const refresh_token = cookieStore.get("refresh_token");
   const expiry_date = cookieStore.get("expiry_date");
+  const token_type = cookieStore.get("token_type");
+  const scope = cookieStore.get("scope");
   //判断token是否过期
   if (access_token && expiry_date) {
     const now = new Date().getTime();
@@ -34,11 +37,18 @@ export default async function HomePage() {
   } else {
     oauth2Client.setCredentials({
       access_token: access_token.value,
-      refresh_token: cookieStore.get("refresh_token")!.value,
-      expiry_date: +cookieStore.get("expiry_date")!.value,
-      token_type: cookieStore.get("token_type")!.value,
-      scope: cookieStore.get("scope")!.value,
+      refresh_token: refresh_token!.value,
+      expiry_date: +expiry_date!.value,
+      token_type: token_type!.value,
+      scope: scope!.value,
     });
+    // oauth2Client.setCredentials({
+    //   access_token: testToken.access_token,
+    //   refresh_token: testToken.refresh_token,
+    //   expiry_date: +testToken.expiry_date,
+    //   token_type: testToken.token_type,
+    //   scope: testToken.scope,
+    // });
   }
 
   try {
@@ -58,7 +68,7 @@ export default async function HomePage() {
         <div className="h-[calc(100vh-92px)] overflow-y-scroll mt-4">
           <VideoList videoList={items}></VideoList>
         </div>
-        <AddComment></AddComment>
+        {/* <AddComment></AddComment> */}
       </>
     );
   } catch (error: any) {

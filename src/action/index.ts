@@ -50,6 +50,5 @@ async function logOutAction() {
   cookie.delete("scope");
   cookie.delete("token_type");
   cookie.delete("expiry_date");
-  await oauth2Client.revokeCredentials();
 }
 export { searchVideoList, insertComment, logOutAction };

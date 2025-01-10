@@ -5,8 +5,6 @@ import { searchVideoList } from "../../action";
 import { Checkbox, CheckboxGroup, cn, Spinner } from "@nextui-org/react";
 import useAppStore from "../store";
 import { formateNow } from "@/ultis";
-// import { Checkbox } from "@nextui-org/react";
-import { Progress } from "@nextui-org/progress";
 import { Card, CardBody } from "@nextui-org/card";
 import { YouTubeVideo } from "../types/api";
 export interface VideoListProps {
@@ -27,7 +25,10 @@ const VideoList = (props: VideoListProps) => {
     obverser.on("search", async (value: any) => {
       setLoading(true);
       const result = await searchVideoList(value);
-      setList(result!);
+      if (result?.length) {
+        setList(result!);
+        console.log(result[0].snippet?.title);
+      }
       setLoading(false);
     });
   }, []);
