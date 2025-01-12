@@ -11,7 +11,7 @@ async function searchVideoList(value: string) {
       q: value,
       type: ["video"],
       order: "date",
-      maxResults: 100,
+      maxResults: 50,
     });
     return response.data.items;
   } catch (error) {

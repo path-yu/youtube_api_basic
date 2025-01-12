@@ -25,12 +25,13 @@ const VideoList = (props: VideoListProps) => {
     setList(props.videoList);
     obverser.on("search", async (value: any) => {
       setLoading(true);
-      const result = await searchVideoList(value);
-      console.log("search result", result);
-
+      const response = await fetch(`/api/searchVideoList?value=${value}`);
+      const result = await response.json();
       if (result?.length) {
         setList(result!);
         console.log(result[0].snippet?.title);
+      } else {
+        setList([]);
       }
       setLoading(false);
     });
