@@ -16,6 +16,7 @@ const VideoList = (props: VideoListProps) => {
   const setSelectedVideoList = useAppStore(
     (state) => state.setSelectedVideoList
   );
+  console.log(list, "render");
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
   // // 是否全选
