@@ -19,6 +19,15 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 } */
+html,
+body {
+  touch-action: manipulation;
+}
+input,
+textarea {
+  font-size: 16px;
+}
+
 .search-container {
   position: relative;
   width: 100%;

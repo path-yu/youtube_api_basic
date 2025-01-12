@@ -32,8 +32,7 @@ const VideoList = (props: VideoListProps) => {
       setLoading(false);
     });
   }, []);
-  const resultList = list.length ? list : props.videoList;
-  const listJSX = resultList.map((item, index) => {
+  const listJSX = list.map((item, index) => {
     return (
       <Checkbox key={index} value={item.id.videoId}>
         <Card className="mt-4 w-[85vw] md:w-[60vw]">
@@ -72,7 +71,7 @@ const VideoList = (props: VideoListProps) => {
           onValueChange={(value) => {
             setIsAllSelected(value);
             if (value) {
-              let result = resultList.map((item) => item.id.videoId);
+              let result = list.map((item) => item.id.videoId);
               setSelected(result);
               setSelectedVideoList(result);
             } else {
@@ -95,7 +94,7 @@ const VideoList = (props: VideoListProps) => {
           onValueChange={(value) => {
             setSelected(value);
             setSelectedVideoList(value);
-            if (value.length == resultList.length) {
+            if (value.length == list.length) {
               setIsAllSelected(true);
             } else {
               setIsAllSelected(false);

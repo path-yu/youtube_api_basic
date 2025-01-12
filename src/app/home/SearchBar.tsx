@@ -8,7 +8,6 @@ import AddComment from "./AddComment";
 import { Button } from "@nextui-org/button";
 import { logOutAction } from "@/action";
 import { useRouter } from "next/navigation";
-import { oauth2Client } from "@/ultis/oauthClient";
 
 export default function SearchBar(props: SearchBarProps) {
   const { placeholder = "搜索" } = props;
@@ -30,10 +29,8 @@ export default function SearchBar(props: SearchBarProps) {
     try {
       setBtnLoading(true);
       await logOutAction();
-      clearStorage();
-      setBtnLoading(false);
-      router.push("/");
     } catch (error) {
+    } finally {
       setBtnLoading(false);
       clearStorage();
       router.push("/");
