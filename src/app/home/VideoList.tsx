@@ -1,7 +1,6 @@
 "use client";
 import obverser from "@/ultis/obverser";
 import { useEffect, useState } from "react";
-import { searchVideoList } from "../../action";
 import { Checkbox, CheckboxGroup, cn, Spinner } from "@nextui-org/react";
 import useAppStore from "../store";
 import { formateNow } from "@/ultis";
@@ -27,23 +26,23 @@ const VideoList = (props: VideoListProps) => {
       setLoading(true);
       const response = await fetch(`/api/searchVideoList?value=${value}`, {
         method: "post",
-        // body: JSON.stringify({
-        //   access_token: localStorage.getItem("access_token"),
-        //   refresh_token: localStorage.getItem("refresh_token"),
-        //   expires_in: localStorage.getItem("expires_in"),
-        //   scope: localStorage.getItem("scope"),
-        //   token_type: localStorage.getItem("token_type"),
-        // }),
         body: JSON.stringify({
-          access_token:
-            "ya29.a0ARW5m74tieBwid0pAjHWeRPgqRxq37akrd54NaRlsMG1GAScBvlttbeW4UK1MO3Q3MowluBw06r2TXJQm8vl-QPWt3bSXEZ4rvQ34m8MioEWvwChEceWiAf9ifHE5Nh0RGEvPj4UD5wZyR3pV0TgzgSonJ5H5qy0o1hQuA1MaCgYKAdESARISFQHGX2MifjPJdC3A9UFR441M5g8Ndg0175",
-          refresh_token:
-            "1//05V0oOHvxZCoKCgYIARAAGAUSNwF-L9IrSmWsjOodGxutTW65Jd6mdyiQWHFELQUG74hZst-zxa1YWD_0KNZFFjgopTkzYsupZRE",
-          scope:
-            "https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly",
-          token_type: "Bearer",
-          expiry_date: 1736668036339,
+          access_token: localStorage.getItem("access_token"),
+          refresh_token: localStorage.getItem("refresh_token"),
+          expires_in: localStorage.getItem("expires_in"),
+          scope: localStorage.getItem("scope"),
+          token_type: localStorage.getItem("token_type"),
         }),
+        // body: JSON.stringify({
+        //   access_token:
+        //     "ya29.a0ARW5m74tieBwid0pAjHWeRPgqRxq37akrd54NaRlsMG1GAScBvlttbeW4UK1MO3Q3MowluBw06r2TXJQm8vl-QPWt3bSXEZ4rvQ34m8MioEWvwChEceWiAf9ifHE5Nh0RGEvPj4UD5wZyR3pV0TgzgSonJ5H5qy0o1hQuA1MaCgYKAdESARISFQHGX2MifjPJdC3A9UFR441M5g8Ndg0175",
+        //   refresh_token:
+        //     "1//05V0oOHvxZCoKCgYIARAAGAUSNwF-L9IrSmWsjOodGxutTW65Jd6mdyiQWHFELQUG74hZst-zxa1YWD_0KNZFFjgopTkzYsupZRE",
+        //   scope:
+        //     "https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly",
+        //   token_type: "Bearer",
+        //   expiry_date: 1736668036339,
+        // }),
         headers: {
           "Content-Type": "application/json",
         },
