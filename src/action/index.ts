@@ -20,6 +20,8 @@ async function searchVideoList(value: string) {
 }
 // 插入评论
 async function insertComment(videoId: string, comment: string) {
+  console.log(oauth2Client.credentials, "onInsert comment");
+
   try {
     const youtube = google.youtube({ version: "v3", auth: oauth2Client });
     const response = await youtube.commentThreads.insert({
