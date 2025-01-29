@@ -38,7 +38,13 @@ export default function AddComment() {
       console.log(`Adding comment to ${videoId} after ${delay} milliseconds`);
       await sleep(delay);
       setProgress((prev) => prev + 100 / videoIds.length);
-      await insertComment(videoId, comment);
+      await insertComment(videoId, comment, {
+        access_token: localStorage.getItem("access_token")!,
+        refresh_token: localStorage.getItem("refresh_token")!,
+        expiry_date: +localStorage.getItem("expiry_date")!,
+        scope: localStorage.getItem("scope")!,
+        token_type: localStorage.getItem("token_type")!,
+      });
     }
     setLoading(false);
     setProgress(0);

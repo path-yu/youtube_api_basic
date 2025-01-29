@@ -1,4 +1,5 @@
 "use server";
+import { Credentials } from "@/app/types/api";
 import { oauth2Client } from "@/ultis/oauthClient";
 import { google } from "googleapis";
 import { cookies } from "next/headers";
@@ -19,9 +20,15 @@ async function searchVideoList(value: string) {
   }
 }
 // 插入评论
-async function insertComment(videoId: string, comment: string) {
+async function insertComment(
+  videoId: string,
+  comment: string,
+  tokens?: Credentials
+) {
   console.log(oauth2Client.credentials, "onInsert comment");
-
+  if (tokens) {
+    oauth2Client.setCredentials(tokens);
+  }
   try {
     const youtube = google.youtube({ version: "v3", auth: oauth2Client });
     const response = await youtube.commentThreads.insert({

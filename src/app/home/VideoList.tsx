@@ -15,7 +15,6 @@ const VideoList = (props: VideoListProps) => {
   const setSelectedVideoList = useAppStore(
     (state) => state.setSelectedVideoList
   );
-  console.log(list, "render");
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
   // // 是否全选
@@ -29,7 +28,7 @@ const VideoList = (props: VideoListProps) => {
         body: JSON.stringify({
           access_token: localStorage.getItem("access_token"),
           refresh_token: localStorage.getItem("refresh_token"),
-          expires_in: localStorage.getItem("expires_in"),
+          expiry_date: localStorage.getItem("expiry_date"),
           scope: localStorage.getItem("scope"),
           token_type: localStorage.getItem("token_type"),
         }),
