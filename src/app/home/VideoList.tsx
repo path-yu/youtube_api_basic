@@ -32,6 +32,7 @@ const VideoList = (props: VideoListProps) => {
           scope: localStorage.getItem("scope"),
           token_type: localStorage.getItem("token_type"),
         }),
+        // test token
         // body: JSON.stringify({
         //   access_token:
         //     "ya29.a0ARW5m74tieBwid0pAjHWeRPgqRxq37akrd54NaRlsMG1GAScBvlttbeW4UK1MO3Q3MowluBw06r2TXJQm8vl-QPWt3bSXEZ4rvQ34m8MioEWvwChEceWiAf9ifHE5Nh0RGEvPj4UD5wZyR3pV0TgzgSonJ5H5qy0o1hQuA1MaCgYKAdESARISFQHGX2MifjPJdC3A9UFR441M5g8Ndg0175",
@@ -48,7 +49,10 @@ const VideoList = (props: VideoListProps) => {
       });
       const result = await response.json();
       setList(result.data);
+      setSelectedVideoList([]);
+      setSelected([]);
       setLoading(false);
+      setIsAllSelected(false);
     });
   }, []);
   const listJSX = list.map((item, index) => {

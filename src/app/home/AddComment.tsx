@@ -34,7 +34,8 @@ export default function AddComment() {
     onClose: () => void
   ) {
     for (const videoId of videoIds) {
-      const delay = Math.floor(Math.random() * 500) + 500; // 随机生成 500-10000的延迟
+      /// 生成5-10分钟的随机延迟（单位：毫秒）
+      const delay = Math.floor(Math.random() * (600000 - 300000 + 1)) + 300000;
       console.log(`Adding comment to ${videoId} after ${delay} milliseconds`);
       await sleep(delay);
       setProgress((prev) => prev + 100 / videoIds.length);
@@ -48,7 +49,6 @@ export default function AddComment() {
     }
     setLoading(false);
     setProgress(0);
-    await sleep(300);
     onClose();
   }
 

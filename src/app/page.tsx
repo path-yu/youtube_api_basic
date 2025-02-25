@@ -11,7 +11,7 @@ export default function Home() {
     if (localStorage.getItem("access_token")) {
       setToken(localStorage.getItem("access_token")!);
       setTimeout(() => {
-        router.push("/home");
+        router.push("/home?access_token=" + access_token);
       }, 200);
     }
     console.log("update");
