@@ -1,92 +1,64 @@
-"use server";
-import { oauth2Client } from "@/ultis/oauthClient";
-import { google } from "googleapis";
-import { cookies } from "next/headers";
-// import items from "./mock.json";
-import SearchBar from "./SearchBar";
-import VideoList from "./VideoList";
-import { YouTubeVideo } from "../types/api";
-import Link from "next/link";
-const testToken = {};
-export default async function HomePage() {
-  const cookieStore = await cookies();
-  const access_token = cookieStore.get("access_token");
-  // const access_token =
-  //   cookieStore.get("access_token") || testToken.access_token;
-  const refresh_token = cookieStore.get("refresh_token");
-  const expiry_date = cookieStore.get("expiry_date");
-  const token_type = cookieStore.get("token_type");
-  const scope = cookieStore.get("scope");
-  //判断token是否过期
-  if (access_token && expiry_date) {
-    const now = new Date().getTime();
-    if (now > +expiry_date && refresh_token) {
-      // 刷新token
-      await oauth2Client.refreshAccessToken();
+// pages/index.tsx
+"use client";
+
+import { useEffect, useState } from "react";
+import SearchBar from "@/componets/home/SearchBar";
+import VideoList from "@/componets/home/VideoList";
+import { validateToken } from "@/utils/fetchGoogleApi";
+
+export default function HomePage() {
+  const [isValid, setIsValid] = useState<boolean | null>(null); // null 表示未校验
+  const [errorMessage, setErrorMessage] = useState<string>("");
+
+  useEffect(() => {
+    async function checkToken() {
+      const isDev = process.env.NODE_ENV === "development";
+
+      // // 在开发环境下，跳过校验，直接视为有效
+      if (isDev) {
+        setIsValid(true);
+        return;
+      }
+
+      // 调用 validateToken 校验令牌
+      const result = await validateToken();
+      setIsValid(result.isValid);
+      if (!result.isValid) {
+        setErrorMessage(result.message);
+      }
     }
-  }
-  if (!access_token) {
+
+    checkToken();
+  }, []);
+
+  // 校验中，显示加载状态
+  if (isValid === null) {
     return (
       <div className="flex justify-center items-center flex-col h-[100vh]">
-        <span className="text-red-500">请先登录</span>
-        <a href="/" className="text-base">
-          返回首页
-        </a>
+        <span className="text-gray-500">正在校验令牌...</span>
       </div>
     );
-  } else {
-    oauth2Client.setCredentials({
-      access_token: access_token.value,
-      refresh_token: refresh_token!.value,
-      expiry_date: +expiry_date!.value,
-      token_type: token_type!.value,
-      scope: scope!.value,
-    });
-    // oauth2Client.setCredentials({
-    //   access_token: testToken.access_token,
-    //   refresh_token: testToken.refresh_token,
-    //   expiry_date: +testToken.expiry_date,
-    //   token_type: testToken.token_type,
-    //   scope: testToken.scope,
-    // });
   }
 
-  try {
-    const youtube = google.youtube({ version: "v3", auth: oauth2Client });
-    const response = await youtube.search.list({
-      part: ["snippet"],
-      q: "crypto wallet",
-      maxResults: 100,
-      type: ["video"],
-      order: "date",
-    });
-    const items = response.data.items as YouTubeVideo[];
-    // 遍历数据列表 渲染视频title, 描述, 发布时间
+  // 令牌有效，显示主内容
+  if (isValid) {
     return (
       <>
-        <SearchBar></SearchBar>
+        <SearchBar />
         <div className="h-[calc(100vh-92px)] overflow-y-scroll mt-4">
-          <VideoList videoList={items}></VideoList>
+          <VideoList />
         </div>
-        {/* <AddComment></AddComment> */}
       </>
     );
-  } catch (error: any) {
-    let message = error.toString() as string;
-    if (
-      message.includes(
-        "The request cannot be completed because you have exceeded your"
-      )
-    ) {
-      message = "Api 调用超出限额";
-    }
-    return (
-      <div className="flex justify-center items-center flex-col h-[100vh]">
-        <span className="text-red-500">{message}</span>
-        <Link href="/" className="text-base">
-          返回首页
-        </Link>
-      </div>
-    );
   }
+
+  // 令牌无效，显示错误信息
+  return (
+    <div className="flex justify-center items-center flex-col h-[100vh]">
+      <span className="text-red-500">{errorMessage || "请先登录"}</span>
+      <a href="/" className="text-base">
+        返回首页
+      </a>
+    </div>
+  );
 }

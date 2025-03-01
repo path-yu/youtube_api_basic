@@ -1,60 +1,65 @@
 "use client";
-import obverser from "@/ultis/obverser";
+import obverser from "@/utils/obverser";
 import { useEffect, useState } from "react";
-import { Checkbox, CheckboxGroup, cn, Spinner } from "@nextui-org/react";
-import useAppStore from "../store";
-import { formateNow } from "@/ultis";
+import { Checkbox, CheckboxGroup, Spinner } from "@nextui-org/react";
+import useAppStore from "../../app/store";
+import Link from "next/link";
+import { formateNow } from "@/utils";
 import { Card, CardBody } from "@nextui-org/card";
-import { YouTubeVideo } from "../types/api";
-export interface VideoListProps {
-  videoList: YouTubeVideo[];
-}
+import { YouTubeVideo } from "../../app/types/api";
+import { fetchGoogleApi } from "@/utils/fetchGoogleApi";
+export interface VideoListProps {}
 const VideoList = (props: VideoListProps) => {
   const list = useAppStore((state) => state.videoList);
   const setList = useAppStore((state) => state.setVideoList);
   const setSelectedVideoList = useAppStore(
     (state) => state.setSelectedVideoList
   );
+  const [error, setError] = useState<string | null>(null);
+
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
   // // 是否全选
   const [isAllSelected, setIsAllSelected] = useState(false);
-  useEffect(() => {
-    setList(props.videoList);
-    obverser.on("search", async (value: any) => {
-      setLoading(true);
-      const response = await fetch(`/api/searchVideoList?value=${value}`, {
-        method: "post",
-        body: JSON.stringify({
-          access_token: localStorage.getItem("access_token"),
-          refresh_token: localStorage.getItem("refresh_token"),
-          expiry_date: localStorage.getItem("expiry_date"),
-          scope: localStorage.getItem("scope"),
-          token_type: localStorage.getItem("token_type"),
-        }),
-        // test token
-        // body: JSON.stringify({
-        //   access_token:
-        //     "ya29.a0ARW5m74tieBwid0pAjHWeRPgqRxq37akrd54NaRlsMG1GAScBvlttbeW4UK1MO3Q3MowluBw06r2TXJQm8vl-QPWt3bSXEZ4rvQ34m8MioEWvwChEceWiAf9ifHE5Nh0RGEvPj4UD5wZyR3pV0TgzgSonJ5H5qy0o1hQuA1MaCgYKAdESARISFQHGX2MifjPJdC3A9UFR441M5g8Ndg0175",
-        //   refresh_token:
-        //     "1//05V0oOHvxZCoKCgYIARAAGAUSNwF-L9IrSmWsjOodGxutTW65Jd6mdyiQWHFELQUG74hZst-zxa1YWD_0KNZFFjgopTkzYsupZRE",
-        //   scope:
-        //     "https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly",
-        //   token_type: "Bearer",
-        //   expiry_date: 1736668036339,
-        // }),
-        headers: {
-          "Content-Type": "application/json",
+
+  async function fetchVideos(query = "crypto wallet") {
+    try {
+      const data = await fetchGoogleApi({
+        endpoint: "youtube/v3/search",
+        params: {
+          part: "snippet",
+          q: query,
+          maxResults: "100",
+          type: "video",
+          order: "date",
         },
       });
-      const result = await response.json();
-      setList(result.data);
+      setList(data.items as YouTubeVideo[]);
+    } catch (err) {
+      setError((err as Error).message);
+    }
+  }
+  useEffect(() => {
+    fetchVideos();
+    obverser.on("search", async (value: any) => {
+      setLoading(true);
+      await fetchVideos(value);
       setSelectedVideoList([]);
       setSelected([]);
       setLoading(false);
       setIsAllSelected(false);
     });
   }, []);
+  if (error) {
+    return (
+      <div className="flex justify-center items-center flex-col h-[100vh]">
+        <span className="text-red-500">{error}</span>
+        <Link href="/" className="text-base">
+          返回首页
+        </Link>
+      </div>
+    );
+  }
   const listJSX = list.map((item, index) => {
     return (
       <Checkbox key={index} value={item.id.videoId}>

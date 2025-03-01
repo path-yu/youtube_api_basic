@@ -8,13 +8,18 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    if (localStorage.getItem("access_token")) {
-      setToken(localStorage.getItem("access_token")!);
-      setTimeout(() => {
-        router.push("/home?access_token=" + access_token);
-      }, 200);
+    // 在开发环境下，默认跳转到首页
+    const isDev = process.env.NODE_ENV === "development";
+    if (isDev) {
+      router.push("/home");
+    } else {
+      if (localStorage.getItem("access_token")) {
+        setToken(localStorage.getItem("access_token")!);
+        setTimeout(() => {
+          router.push("/home");
+        }, 200);
+      }
     }
-    console.log("update");
   }, []);
   return (
     <div className="flex w-[100vw] h-[100vh] justify-center items-center">

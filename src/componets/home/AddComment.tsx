@@ -11,10 +11,10 @@ import {
 import { PlusIcon } from "lucide-react";
 import { Textarea } from "@nextui-org/input";
 import { useState } from "react";
-import useAppStore from "../store";
-import { insertComment } from "@/action";
+import useAppStore from "../../app/store";
 import { Progress } from "@nextui-org/progress";
-import { sleep } from "@/ultis";
+import { sleep } from "@/utils";
+import { insertComment } from "@/utils/fetchGoogleApi";
 
 export default function AddComment() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -35,17 +35,12 @@ export default function AddComment() {
   ) {
     for (const videoId of videoIds) {
       /// 生成5-10分钟的随机延迟（单位：毫秒）
-      const delay = Math.floor(Math.random() * (600000 - 300000 + 1)) + 300000;
+      // const delay = Math.floor(Math.random() * (600000 - 300000 + 1)) + 300000;
+      const delay = 2000;
       console.log(`Adding comment to ${videoId} after ${delay} milliseconds`);
       await sleep(delay);
       setProgress((prev) => prev + 100 / videoIds.length);
-      await insertComment(videoId, comment, {
-        access_token: localStorage.getItem("access_token")!,
-        refresh_token: localStorage.getItem("refresh_token")!,
-        expiry_date: +localStorage.getItem("expiry_date")!,
-        scope: localStorage.getItem("scope")!,
-        token_type: localStorage.getItem("token_type")!,
-      });
+      await insertComment(videoId, comment);
     }
     setLoading(false);
     setProgress(0);
@@ -57,12 +52,7 @@ export default function AddComment() {
       <Button color="primary" onPress={onOpen} isIconOnly>
         <PlusIcon></PlusIcon>
       </Button>
-      <Modal
-        isDismissable={false}
-        backdrop="blur"
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-      >
+      <Modal isDismissable={false} isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
             <>

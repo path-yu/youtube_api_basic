@@ -2,12 +2,12 @@
 
 import { Delete, LogOut, Search } from "lucide-react";
 import { FormEvent, useState } from "react";
-import { SearchBarProps } from "../types/search";
-import obverser from "@/ultis/obverser";
+import { SearchBarProps } from "../../app/types/search";
+import obverser from "@/utils/obverser";
 import AddComment from "./AddComment";
 import { Button } from "@nextui-org/button";
-import { logOutAction } from "@/action";
 import { useRouter } from "next/navigation";
+import { logout } from "@/utils/fetchGoogleApi";
 
 export default function SearchBar(props: SearchBarProps) {
   const { placeholder = "搜索" } = props;
@@ -28,7 +28,7 @@ export default function SearchBar(props: SearchBarProps) {
   const handleLogOut = async () => {
     try {
       setBtnLoading(true);
-      await logOutAction();
+      await logout();
     } catch (error) {
     } finally {
       setBtnLoading(false);

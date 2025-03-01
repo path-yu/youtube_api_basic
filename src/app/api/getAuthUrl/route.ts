@@ -1,4 +1,4 @@
-import { oauth2Client } from "@/ultis/oauthClient";
+import { oauth2Client } from "@/utils/oauthClient";
 
 // google oauth2 callback 接口
 export async function GET(request: Request) {
