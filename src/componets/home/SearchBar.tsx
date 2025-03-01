@@ -37,7 +37,10 @@ export default function SearchBar(props: SearchBarProps) {
     }
   };
   return (
-    <div className="flex justify-center px-3 pt-3 sticky top-0 z-99 ">
+    <div
+      className="flex justify-center px-3 pt-6 sticky top-0 z-99 "
+      style={{ paddingTop: "12px" }}
+    >
       <div className="search-container mr-2">
         <input
           onChange={(e) => setSearchValue(e.target.value)}
@@ -63,7 +66,8 @@ export default function SearchBar(props: SearchBarProps) {
         color="primary"
         isIconOnly
         onPress={handleLogOut}
-        className="ml-2"
+        style={{ marginLeft: "6px" }}
+        className="ml-4"
       >
         <LogOut></LogOut>
       </Button>

@@ -19,6 +19,22 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 } */
+/* styles/custom.css */
+.custom-width {
+  width: 85vw;
+}
+.truncate-custom {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 限制为两行 */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+@media (min-width: 768px) {
+  .custom-width {
+    width: 60vw;
+  }
+}
 html,
 body {
   touch-action: manipulation;
