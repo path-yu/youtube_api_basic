@@ -2,7 +2,8 @@
 import SingGoogleButton from "@/componets/SingGoogleButton";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Spinner } from "@nextui-org/react";
+import CircularProgress from "@mui/material/CircularProgress";
+
 export default function Home() {
   const [access_token, setToken] = useState("");
   const router = useRouter();
@@ -25,7 +26,8 @@ export default function Home() {
     <div className="flex w-[100vw] h-[100vh] justify-center items-center">
       {access_token ? (
         <div className="text-lg text-gray-300 flex items-center">
-          <Spinner label="Loading..." size="md" />
+          <CircularProgress size="md" />
+          <span>loading</span>
         </div>
       ) : (
         <SingGoogleButton></SingGoogleButton>

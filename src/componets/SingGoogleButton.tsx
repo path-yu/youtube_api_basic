@@ -1,6 +1,7 @@
 "use client";
 
-import { Button } from "@nextui-org/button";
+import { CircularProgress } from "@mui/material";
+import Button from "@mui/material/Button";
 import { useState } from "react";
 
 export default function SingGoogleButton() {
@@ -17,7 +18,13 @@ export default function SingGoogleButton() {
       });
   };
   return (
-    <Button isLoading={btnLoading} color="primary" onPress={handleSignClick}>
+    <Button
+      variant="contained"
+      color="primary"
+      onClick={handleSignClick}
+      disabled={btnLoading}
+      startIcon={btnLoading ? <CircularProgress size={20} /> : null}
+    >
       使用 Google 登录
     </Button>
   );
