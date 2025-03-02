@@ -10,10 +10,10 @@ import useAppStore from "../store";
 export default function HomePage() {
   const [isValid, setIsValid] = useState<boolean | null>(null); // null 表示未校验
   const [errorMessage, setErrorMessage] = useState<string>("");
-  const { initialCommentTemplates, commentTemplates } = useAppStore();
+  const { initState } = useAppStore();
 
   useEffect(() => {
-    initialCommentTemplates();
+    initState();
     async function checkToken() {
       const isDev = process.env.NODE_ENV === "development";
 

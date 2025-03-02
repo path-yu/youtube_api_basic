@@ -21,6 +21,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import SearchSettingsDialog from "./SearchSettingsDialog";
 
 export default function SearchBar(props: SearchBarProps) {
   const { placeholder = "搜索" } = props;
@@ -29,6 +30,7 @@ export default function SearchBar(props: SearchBarProps) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [isAddCommentOpen, setIsAddCommentOpen] = useState(false);
   const [isTemplatesOpen, setIsTemplatesOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false); // 新增设置弹窗状态
   const router = useRouter();
 
   const theme = useTheme();
@@ -132,6 +134,10 @@ export default function SearchBar(props: SearchBarProps) {
               <Settings style={{ marginRight: 8 }} />
               评论模板设置
             </MenuItem>
+            <MenuItem onClick={() => setIsSettingsOpen(true)}>
+              <Settings style={{ marginRight: 8 }} />
+              搜索设置
+            </MenuItem>
             <MenuItem onClick={handleLogOut} disabled={btnLoading}>
               {btnLoading ? (
                 <CircularProgress size={20} sx={{ mr: 1 }} />
@@ -152,7 +158,6 @@ export default function SearchBar(props: SearchBarProps) {
         </>
       ) : (
         <>
-          <AddComment />
           <Button
             variant="outlined"
             color="primary"
@@ -161,13 +166,19 @@ export default function SearchBar(props: SearchBarProps) {
           >
             模板设置
           </Button>
-          <IconButton
+          <Button
+            variant="outlined"
             color="primary"
-            onClick={handleLogOut}
-            disabled={btnLoading}
+            onClick={() => setIsSettingsOpen(true)}
+            sx={{ mx: 1 }}
           >
+            默认搜索设置
+          </Button>
+          <AddComment />
+          <IconButton onClick={handleLogOut} disabled={btnLoading}>
             {btnLoading ? <CircularProgress size={20} /> : <LogOut />}
           </IconButton>
+
           {/* 在桌面端显式渲染 Dialog */}
           <CommentTemplatesDialog
             open={isTemplatesOpen}
@@ -175,6 +186,10 @@ export default function SearchBar(props: SearchBarProps) {
           />
         </>
       )}
+      <SearchSettingsDialog
+        open={isSettingsOpen}
+        onClose={() => setIsSettingsOpen(false)}
+      />
     </Box>
   );
 }

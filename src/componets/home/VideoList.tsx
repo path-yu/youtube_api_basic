@@ -24,6 +24,7 @@ import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import FilterListIcon from "@mui/icons-material/FilterList";
+import { getPublishedAfter } from "@/utils/dateUtils";
 
 export interface VideoListProps {}
 
@@ -33,6 +34,7 @@ const VideoList = (props: VideoListProps) => {
   const setSelectedVideoList = useAppStore(
     (state) => state.setSelectedVideoList
   );
+  const defaultSettings = useAppStore((state) => state.searchSettings);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
@@ -42,11 +44,10 @@ const VideoList = (props: VideoListProps) => {
     uploadDate: "",
     type: "video",
     duration: "",
-    features: [],
     order: "relevance",
   });
 
-  async function fetchVideos(query = "crypto wallet") {
+  async function fetchVideos(query = "crypto wallet", init = false) {
     try {
       const params: any = {
         part: "snippet",
@@ -55,56 +56,47 @@ const VideoList = (props: VideoListProps) => {
         type: filters.type,
         order: filters.order,
       };
-
       // 上传日期过滤
       if (filters.uploadDate) {
-        const now = new Date();
-        let publishedAfter: string | undefined;
-        switch (filters.uploadDate) {
-          case "lastHour":
-            publishedAfter = new Date(
-              now.getTime() - 60 * 60 * 1000
-            ).toISOString();
-            break;
-          case "today":
-            publishedAfter = new Date(now.setHours(0, 0, 0, 0)).toISOString();
-            break;
-          case "thisWeek":
-            publishedAfter = new Date(
-              now.getTime() - 7 * 24 * 60 * 60 * 1000
-            ).toISOString();
-            break;
-          case "thisMonth":
-            publishedAfter = new Date(
-              now.getFullYear(),
-              now.getMonth(),
-              1
-            ).toISOString();
-            break;
-          case "thisYear":
-            publishedAfter = new Date(now.getFullYear(), 0, 1).toISOString();
-            break;
-        }
+        let publishedAfter = getPublishedAfter(filters.uploadDate);
         if (publishedAfter) params.publishedAfter = publishedAfter;
       }
-
       // 时长过滤
       if (filters.duration) {
         params.videoDuration = filters.duration;
       }
-
+      if (init) {
+        params.q = defaultSettings.defaultQuery;
+        params.publishedAfter = getPublishedAfter(defaultSettings.uploadDate);
+        params.order = defaultSettings.order;
+        params.videoDuration = defaultSettings.duration;
+      }
+      if (!params.publishedAfter) {
+        delete params.publishedAfter;
+      }
+      if (!params.videoDuration) {
+        delete params.videoDuration;
+      }
       const data = await fetchGoogleApi({
         endpoint: "youtube/v3/search",
         params,
       });
       setList(data.items as YouTubeVideo[]);
-    } catch (err) {
-      setError((err as Error).message);
+    } catch (err: any) {
+      const errorMessage =
+        err.message ||
+        (err.error && err.error.message) ||
+        "Unknown error occurred";
+      const detailedMessage =
+        err.details && err.details.length > 0
+          ? `${errorMessage} - ${err.details.join(", ")}`
+          : errorMessage;
+      setError(detailedMessage);
     }
   }
 
   useEffect(() => {
-    fetchVideos();
+    fetchVideos(defaultSettings.defaultQuery, true);
     obverser.on("search", async (value: any) => {
       setLoading(true);
       await fetchVideos(value);
@@ -123,13 +115,16 @@ const VideoList = (props: VideoListProps) => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh",
+          height: "70vh",
+          padding: "0 5px",
         }}
       >
-        <Typography color="error">{error}</Typography>
-        <Link href="/" style={{ textDecoration: "none" }}>
+        <Typography color="error" textAlign="center">
+          {error}
+        </Typography>
+        {/* <Link href="/" style={{ textDecoration: "none" }}>
           <Typography color="primary">返回首页</Typography>
-        </Link>
+        </Link> */}
       </Box>
     );
   }
@@ -315,19 +310,6 @@ const VideoList = (props: VideoListProps) => {
               <MenuItem value="thisWeek">本周</MenuItem>
               <MenuItem value="thisMonth">本月</MenuItem>
               <MenuItem value="thisYear">今年</MenuItem>
-            </Select>
-          </FormControl>
-
-          <FormControl fullWidth sx={{ mt: 2 }}>
-            <InputLabel>类型</InputLabel>
-            <Select
-              value={filters.type}
-              onChange={(e) => setFilters({ ...filters, type: e.target.value })}
-            >
-              <MenuItem value="video">视频</MenuItem>
-              <MenuItem value="channel">频道</MenuItem>
-              <MenuItem value="playlist">播放列表</MenuItem>
-              <MenuItem value="movie">电影</MenuItem>
             </Select>
           </FormControl>
 

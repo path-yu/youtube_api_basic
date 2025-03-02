@@ -34,11 +34,7 @@ export default function CommentTemplatesDialog({
     addCommentTemplate,
     removeCommentTemplate,
     updateCommentTemplate,
-    initialCommentTemplates,
   } = useAppStore();
-  useEffect(() => {
-    initialCommentTemplates();
-  }, []);
   const handleAddOrUpdate = () => {
     if (templateContent.trim()) {
       if (editId) {

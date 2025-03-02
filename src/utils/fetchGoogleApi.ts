@@ -20,7 +20,8 @@ interface FetchGoogleApiOptions {
   params?: Record<string, string | number | boolean>; // 查询参数
   body?: object; // POST 请求的 body
   customHeaders?: Record<string, string>; // 自定义头
-}
+} // 在开发环境下，如果没有 access_token，使用 testToken
+const isDev = process.env.NODE_ENV === "development";
 
 const BASE_URL = "https://www.googleapis.com"; // Google API 基础 URL
 const TOKEN_ENDPOINT = "https://oauth2.googleapis.com/token";
@@ -31,21 +32,24 @@ const CLIENT_SECRET = process.env.NEXT_PUBLIC_CLIENT_SECRET; // 注意安全性�
 const REDIRECT_URI = process.env.NEXT_PUBLIC_REDIRECT_URI;
 
 const REVOKE_ENDPOINT = "https://oauth2.googleapis.com/revoke";
-// 测试令牌（仅用于本地开发环境）token失效时 localStorage也要进行清空
+// 测试令牌（仅用于本地开发环境）token失效时
 const testToken: Tokens = {
   access_token:
-    "ya29.a0AeXRPp6kJGeKNeh6vBSvmMWM1SmpWxmAuiubcCXKeywM2Nq-v0Xf4mLojATsCwM_Wamdj9qrh_4pevZc7hserIPutZmj6T8XqP3jQRvnNBi5Xdez5vPwj_pcsSQmJmrNv_dG_yqXNBTzp7WeNHNj7O_0YCJA4gfwjr2a1I1uaCgYKAfkSARISFQHGX2MiQkMrzdMhhhHfhD70fWec4w0175",
+    "ya29.a0AeXRPp7N9Rd0h1ce1aMd48MOF6441HW0IyPeKzV8sJCY6PyMj8Qo6m-kV_7Vw-mhIz6dmHoIEHltMKZtAw5FIgq_Ve_2OiVc9lrypoZmuOz6z-ad6UIunhmGf6hhx81Vq5f3xVT4OYGETBZvqUwYvHEQdqJm9FkGvshrg28LaCgYKAVsSARISFQHGX2MiDDw5jYBDenQlXQWzrNOuDA0175",
   refresh_token_expires_in: 604799,
   expires_in: 3599,
   token_type: "Bearer",
-  scope:
-    "https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly",
+  scope: "https://www.googleapis.com/auth/youtube.force-ssl",
   refresh_token:
-    "1//04GV4D_fBF6aaCgYIARAAGAQSNwF-L9Irljuydv6rJbviuwZktl4qDTyGMqwVKrKFEfCFQwKq4IKhUwWJ82Nso6a4dgGdUUYV4Us",
+    "1//04PQ-b5F5b8JrCgYIARAAGAQSNwF-L9IrBaBIe-33xY1C49bUeFzCY2K2_8or7oE7FLssbv5SZkTPFGkuAIXSI83-iQJdSncn_Co",
 };
 
 // 从 localStorage 获取令牌
 function getStoredTokens(): Partial<Tokens> {
+  if (isDev) {
+    updateStoredTokens(testToken);
+    return testToken;
+  }
   return {
     access_token: localStorage.getItem("access_token") || undefined,
     refresh_token: localStorage.getItem("refresh_token") || undefined,
@@ -112,7 +116,12 @@ async function refreshAccessToken(refresh_token: string): Promise<string> {
   updateStoredTokens(updatedTokens);
   return updatedTokens.access_token;
 }
-
+// utils/fetchGoogleApi.ts
+interface ApiError {
+  message: string;
+  code?: number;
+  details?: string[];
+}
 // 通用的 fetchGoogleApi 方法
 export async function fetchGoogleApi({
   endpoint,
@@ -123,8 +132,6 @@ export async function fetchGoogleApi({
 }: FetchGoogleApiOptions): Promise<any> {
   let tokens = getStoredTokens();
 
-  // 在开发环境下，如果没有 access_token，使用 testToken
-  const isDev = process.env.NODE_ENV === "development";
   if (isDev && !tokens.access_token) {
     console.warn("Using testToken in development mode");
     tokens = testToken;
@@ -168,12 +175,16 @@ export async function fetchGoogleApi({
   const response = await fetch(url, config);
 
   if (!response.ok) {
-    const errorText = await response.text();
-    let message = errorText || "Unknown error";
+    const errorData = await response.json();
+    let message = errorData.error?.message || "Unknown API error";
     if (message.includes("quota")) {
       message = "API 调用超出限额";
     }
-    throw new Error(message);
+    throw {
+      message: message,
+      code: errorData.error?.code,
+      details: errorData.error?.errors?.map((e: any) => e.message),
+    } as ApiError;
   }
 
   return response.json(); // 返回解析后的 JSON 数据
