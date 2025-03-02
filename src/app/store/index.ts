@@ -32,17 +32,11 @@ type AppStore = AppStoreState & AppStoreStateActions;
 const STORAGE_KEY = "commentTemplates";
 
 const useAppStore = create<AppStore>((set) => {
-  // 初始化 commentTemplates 从 localStorage 加载
-  const initialCommentTemplates = (() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    return stored ? JSON.parse(stored) : [];
-  })();
-
   return {
     videoList: [],
     selectedVideoList: [],
     searchValue: "",
-    commentTemplates: initialCommentTemplates, // 使用初始值
+    commentTemplates: [], // 使用初始值
     setVideoList: (videoList) => set({ videoList }),
     setSearchValue: (searchValue) => set({ searchValue }),
     setSelectedVideoList: (selectedVideoList) => set({ selectedVideoList }),

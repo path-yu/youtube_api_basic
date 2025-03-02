@@ -5,12 +5,16 @@ import { useEffect, useState } from "react";
 import SearchBar from "@/componets/home/SearchBar";
 import VideoList from "@/componets/home/VideoList";
 import { validateToken } from "@/utils/fetchGoogleApi";
+import useAppStore from "../store";
 
 export default function HomePage() {
   const [isValid, setIsValid] = useState<boolean | null>(null); // null 表示未校验
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const { initialCommentTemplates } = useAppStore();
 
   useEffect(() => {
+    initialCommentTemplates();
+
     async function checkToken() {
       const isDev = process.env.NODE_ENV === "development";
 
