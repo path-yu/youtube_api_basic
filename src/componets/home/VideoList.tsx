@@ -113,7 +113,7 @@ const VideoList = (props: VideoListProps) => {
       setLoading(false);
       setIsAllSelected(false);
     });
-  }, [fetchVideos, setSelectedVideoList]);
+  }, []);
 
   if (error) {
     return (
