@@ -34,14 +34,14 @@ const REVOKE_ENDPOINT = "https://oauth2.googleapis.com/revoke";
 // 测试令牌（仅用于本地开发环境）token失效时 localStorage也要进行清空
 const testToken: Tokens = {
   access_token:
-    "ya29.a0AeXRPp77ok1LiVrN0fddSdLQoAp2Z7Ty_WbIz_U6aAm_PjMQ-6qAUrHPmCVYsMFfwL8GguRazupw5tpFZn0nSeA-D9jiR3-IGhqGyVdECcPp8Xnu0L4ClUeMd8QKuVQDwnmM6Bb9jpX5i8_1t_3o3CSbNUuuzWPnFP3wmn7waCgYKAbASARISFQHGX2Mi-d4GEyKNHSvfjlR8qYFquQ0175",
+    "ya29.a0AeXRPp6kJGeKNeh6vBSvmMWM1SmpWxmAuiubcCXKeywM2Nq-v0Xf4mLojATsCwM_Wamdj9qrh_4pevZc7hserIPutZmj6T8XqP3jQRvnNBi5Xdez5vPwj_pcsSQmJmrNv_dG_yqXNBTzp7WeNHNj7O_0YCJA4gfwjr2a1I1uaCgYKAfkSARISFQHGX2MiQkMrzdMhhhHfhD70fWec4w0175",
   refresh_token_expires_in: 604799,
   expires_in: 3599,
   token_type: "Bearer",
   scope:
     "https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly",
   refresh_token:
-    "1//04B2qEp9rVaAjCgYIARAAGAQSNwF-L9IromDPixgdS6ps25DZVJji18fGZb_pW0ZrCyz8P-WtnAdbN01ifS5aj1FsQqYgBMaKsiI",
+    "1//04GV4D_fBF6aaCgYIARAAGAQSNwF-L9Irljuydv6rJbviuwZktl4qDTyGMqwVKrKFEfCFQwKq4IKhUwWJ82Nso6a4dgGdUUYV4Us",
 };
 
 // 从 localStorage 获取令牌

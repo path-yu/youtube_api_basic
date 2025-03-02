@@ -33,7 +33,6 @@ export default function HomePage() {
 
     checkToken();
   }, []);
-
   // 校验中，显示加载状态
   if (isValid === null) {
     return (

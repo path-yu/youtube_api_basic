@@ -247,7 +247,8 @@ const VideoList = (props: VideoListProps) => {
         sx={{
           display: "flex",
           alignItems: "center",
-          width: { xs: "85vw", sm: 600 },
+          justifyContent: "center",
+          width: { xs: "100vw", sm: 600 },
           mb: 2,
         }}
       >
