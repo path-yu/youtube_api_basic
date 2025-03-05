@@ -215,16 +215,17 @@ export async function logout(redirectPath: string = "/"): Promise<void> {
       console.error("Error during token revocation:", error);
     }
   }
-
+  clearStorageToken();
+  // // 重定向到指定页面（默认是登录页）
+  // window.location.href = redirectPath;
+}
+function clearStorageToken() {
   // 清除 localStorage 中的所有令牌
   localStorage.removeItem("access_token");
   localStorage.removeItem("refresh_token");
   localStorage.removeItem("expires_in");
   localStorage.removeItem("token_type");
   localStorage.removeItem("scope");
-
-  // // 重定向到指定页面（默认是登录页）
-  // window.location.href = redirectPath;
 }
 // 插入评论
 export async function insertComment(
@@ -286,6 +287,7 @@ export async function validateToken(): Promise<{
 
   const now = Date.now();
   if (tokens.expires_in && now > tokens.expires_in && !tokens.refresh_token) {
+    clearStorageToken();
     return {
       isValid: false,
       message: "Access token has expired and no refresh token available.",
@@ -297,6 +299,7 @@ export async function validateToken(): Promise<{
     try {
       currentAccessToken = await refreshAccessToken(tokens.refresh_token);
     } catch (error: any) {
+      clearStorageToken();
       return {
         isValid: false,
         message: `Failed to refresh token: ${error.message}`,
@@ -311,6 +314,7 @@ export async function validateToken(): Promise<{
     });
     return { isValid: true, message: "Token is valid." };
   } catch (error: any) {
+    clearStorageToken();
     return {
       isValid: false,
       message: `Token validation failed: ${error.message}`,
