@@ -284,7 +284,7 @@ const VideoList = (props: VideoListProps) => {
           <Typography sx={{ ml: 2 }}>Loading...</Typography>
         </Box>
       ) : (
-        <Box sx={{ mt: 2, width: "100%" }}>{listJSX}</Box>
+        <Box sx={{ mt: 2, width: { xs: "100%", sm: "600px" } }}>{listJSX}</Box>
       )}
 
       {/* 过滤弹窗 */}
