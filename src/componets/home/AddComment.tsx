@@ -110,10 +110,10 @@ export default function AddComment({
 
   const handleClose = () => {
     setInternalIsOpen(false);
-    setLoading(false);
-    setProgress(0);
-    setComment("");
-    setSelectedTemplates([]); // 重置所选模板
+    // setLoading(false);
+    // setProgress(0);
+    // setComment("");
+    // setSelectedTemplates([]); // 重置所选模板
     if (externalOnClose) {
       externalOnClose();
     }
