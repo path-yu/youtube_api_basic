@@ -48,11 +48,18 @@ interface Snippet {
 }
 
 export interface YouTubeVideo {
-  etag: string;
-  id: {
-    kind: string;
-    videoId: string;
-  };
-  kind: string;
-  snippet: Snippet;
+  id: string;
+  title: string;
+  cover: string;
+  published_at: string;
+  viewCount: string;
+  duration: string;
+}
+export interface MyYoutubeVide {
+  id: string;
+  title: string;
+  cover: string;
+  published_at: string;
+  viewCount: string;
+  duration: string;
 }

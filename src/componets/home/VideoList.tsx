@@ -1,7 +1,7 @@
 "use client";
 
 import obverser from "@/utils/obverser";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -46,42 +46,34 @@ const VideoList = (props: VideoListProps) => {
     duration: "",
     order: "relevance",
   });
+  const filtersRef = useRef(filters);
 
+  // 每次 filters 变化都更新 ref.current
+  useEffect(() => {
+    filtersRef.current = filters;
+  }, [filters]);
   async function fetchVideos(query = "crypto wallet", init = false) {
     try {
-      const params: any = {
-        part: "snippet",
-        q: query,
-        maxResults: "100",
-        type: filters.type,
-        order: filters.order,
-      };
-      // 上传日期过滤
-      if (filters.uploadDate) {
-        let publishedAfter = getPublishedAfter(filters.uploadDate);
-        if (publishedAfter) params.publishedAfter = publishedAfter;
+      setLoading(true); //
+      const currentFilters = filtersRef.current;
+
+      const urlParams = new URLSearchParams();
+      urlParams.append("query", query);
+      urlParams.append("type", currentFilters.type);
+      urlParams.append("duration", currentFilters.duration);
+      urlParams.append("upload_date", currentFilters.uploadDate);
+      urlParams.append("sort_by", currentFilters.order);
+      if (!query) {
+        return;
       }
-      // 时长过滤
-      if (filters.duration) {
-        params.videoDuration = filters.duration;
-      }
-      if (init) {
-        params.q = defaultSettings.defaultQuery;
-        params.publishedAfter = getPublishedAfter(defaultSettings.uploadDate);
-        params.order = defaultSettings.order;
-        params.videoDuration = defaultSettings.duration;
-      }
-      if (!params.publishedAfter) {
-        delete params.publishedAfter;
-      }
-      if (!params.videoDuration) {
-        delete params.videoDuration;
-      }
-      const data = await fetchGoogleApi({
-        endpoint: "youtube/v3/search",
-        params,
+      const data = await fetch(`/api/search?${urlParams.toString()}`, {
+        method: "GET",
       });
-      setList(data.items as YouTubeVideo[]);
+      const list = await data.json();
+      if (list.error) {
+        throw new Error(list.error);
+      }
+      setList(list as any);
     } catch (err: any) {
       const errorMessage =
         err.message ||
@@ -92,17 +84,19 @@ const VideoList = (props: VideoListProps) => {
           ? `${errorMessage} - ${err.details.join(", ")}`
           : errorMessage;
       setError(detailedMessage);
+    } finally {
+      setLoading(false);
     }
   }
 
   useEffect(() => {
     fetchVideos(defaultSettings.defaultQuery, true);
     obverser.on("search", async (value: any) => {
-      setLoading(true);
-      await fetchVideos(value);
+      setList([]);
+      setError(null);
       setSelectedVideoList([]);
       setSelected([]);
-      setLoading(false);
+      await fetchVideos(value);
       setIsAllSelected(false);
     });
   }, []);
@@ -148,14 +142,12 @@ const VideoList = (props: VideoListProps) => {
 
   const listJSX = list.map((item) => (
     <FormControlLabel
-      key={item.id.videoId}
+      key={item.id}
       control={
         <Checkbox
-          value={item.id.videoId}
-          checked={selected.includes(item.id.videoId)}
-          onChange={(e) =>
-            handleCheckboxChange(item.id.videoId, e.target.checked)
-          }
+          value={item.id}
+          checked={selected.includes(item.id)}
+          onChange={(e) => handleCheckboxChange(item.id, e.target.checked)}
           onClick={(e) => e.stopPropagation()}
         />
       }
@@ -169,14 +161,14 @@ const VideoList = (props: VideoListProps) => {
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
-            const isChecked = selected.includes(item.id.videoId);
-            handleCheckboxChange(item.id.videoId, !isChecked);
+            const isChecked = selected.includes(item.id);
+            handleCheckboxChange(item.id, !isChecked);
           }}
         >
           <CardContent>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <img
-                src={item.snippet.thumbnails.default.url}
+                src={item.cover}
                 alt="Channel Logo"
                 style={{
                   width: 64,
@@ -196,19 +188,9 @@ const VideoList = (props: VideoListProps) => {
                     whiteSpace: "nowrap",
                   }}
                 >
-                  {item.snippet.title}
+                  {item.title}
                 </Typography>
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {item.snippet.description}
-                </Typography>
+
                 <Typography
                   variant="caption"
                   color="text.secondary"
@@ -218,7 +200,7 @@ const VideoList = (props: VideoListProps) => {
                     whiteSpace: "nowrap",
                   }}
                 >
-                  {formateNow(item.snippet.publishTime)}
+                  {formateNow(item.published_at)}
                 </Typography>
               </Box>
             </Box>
@@ -255,7 +237,7 @@ const VideoList = (props: VideoListProps) => {
                 const value = e.target.checked;
                 setIsAllSelected(value);
                 if (value) {
-                  const result = list.map((item) => item.id.videoId);
+                  const result = list.map((item) => item.id);
                   setSelected(result);
                   setSelectedVideoList(result);
                 } else {
@@ -304,12 +286,19 @@ const VideoList = (props: VideoListProps) => {
                 setFilters({ ...filters, uploadDate: e.target.value })
               }
             >
-              <MenuItem value="">任意时间</MenuItem>
+              {/* <MenuItem value="">任意时间</MenuItem>
               <MenuItem value="lastHour">过去 1 小时</MenuItem>
               <MenuItem value="today">今天</MenuItem>
               <MenuItem value="thisWeek">本周</MenuItem>
               <MenuItem value="thisMonth">本月</MenuItem>
-              <MenuItem value="thisYear">今年</MenuItem>
+              <MenuItem value="thisYear">今年</MenuItem> */}
+              {/* youtube.js api */}
+              <MenuItem value="all">任意时间</MenuItem>
+              <MenuItem value="hour">过去 1 小时</MenuItem>
+              <MenuItem value="today">今天</MenuItem>
+              <MenuItem value="week">本周</MenuItem>
+              <MenuItem value="month">本月</MenuItem>
+              <MenuItem value="year">今年</MenuItem>
             </Select>
           </FormControl>
 
@@ -321,7 +310,7 @@ const VideoList = (props: VideoListProps) => {
                 setFilters({ ...filters, duration: e.target.value })
               }
             >
-              <MenuItem value="">任意时长</MenuItem>
+              <MenuItem value="all">任意时长</MenuItem>
               <MenuItem value="short">4 分钟以下</MenuItem>
               <MenuItem value="medium">4 - 20 分钟</MenuItem>
               <MenuItem value="long">20 分钟以上</MenuItem>
@@ -336,8 +325,8 @@ const VideoList = (props: VideoListProps) => {
               }
             >
               <MenuItem value="relevance">相关程度</MenuItem>
-              <MenuItem value="date">上传日期</MenuItem>
-              <MenuItem value="viewCount">观看次数</MenuItem>
+              <MenuItem value="upload_date">上传日期</MenuItem>
+              <MenuItem value="view_count">观看次数</MenuItem>
               <MenuItem value="rating">评分</MenuItem>
             </Select>
           </FormControl>
