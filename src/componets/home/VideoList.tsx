@@ -200,7 +200,15 @@ const VideoList = (props: VideoListProps) => {
                     whiteSpace: "nowrap",
                   }}
                 >
-                  {formateNow(item.published_at)}
+                  {item.published_at}
+                </Typography>
+                {/* view count */}
+                <Typography
+                  variant="caption"
+                  color="text.secondary"
+                  sx={{ paddingLeft: "5px" }}
+                >
+                  {item.viewCount}
                 </Typography>
               </Box>
             </Box>
